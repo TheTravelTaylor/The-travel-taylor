@@ -3,7 +3,7 @@
     "name": "The Travel Taylor",
     "tagline": "Slow travel. Good food. Better drinks.",
     "homeKicker": "THE TRAVEL TAYLOR · EST. 2026",
-    "homeHeadline": "Travel slowly. Eat well. Order another bottle.",
+    "homeHeadline": "Travel slowly. Eat well. Enjoy",
     "homeIntro": "Personal notes on considered journeys, memorable tables and the places worth making time for."
   },
   "sections": {
@@ -30,14 +30,110 @@
   },
   "articles": [
     {
-      "slug": "la-petite-colombe",
-      "section": "eat",
-      "location": "FRANSCHHOEK, SOUTH AFRICA",
-      "title": "La Petite Colombe",
-      "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
-      "score": 9.5,
-      "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
-      "hero": "",
+      "scores": [
+        [
+          "FOOD",
+          9,
+          "Ambitious cooking with plenty of playfulness.",
+          [
+            "0",
+            "FOOD"
+          ],
+          [
+            "1",
+            9
+          ],
+          [
+            "2",
+            "Ambitious cooking with plenty of playfulness."
+          ]
+        ],
+        [
+          "SETTING & VIEWS",
+          10,
+          "Mountains, vineyards and clouds that never sat still.",
+          [
+            "0",
+            "SETTING & VIEWS"
+          ],
+          [
+            "1",
+            10
+          ],
+          [
+            "2",
+            "Mountains, vineyards and clouds that never sat still."
+          ]
+        ],
+        [
+          "SERVICE",
+          9.5,
+          "Personal, polished and never hovering.",
+          [
+            "0",
+            "SERVICE"
+          ],
+          [
+            "1",
+            9.5
+          ],
+          [
+            "2",
+            "Personal, polished and never hovering."
+          ]
+        ],
+        [
+          "WINE",
+          8.5,
+          "Lovely Chardonnay; the pairing felt overpriced.",
+          [
+            "0",
+            "WINE"
+          ],
+          [
+            "1",
+            8.5
+          ],
+          [
+            "2",
+            "Lovely Chardonnay; the pairing felt overpriced."
+          ]
+        ],
+        [
+          "VALUE",
+          9,
+          "The food menu delivered very good value.",
+          [
+            "0",
+            "VALUE"
+          ],
+          [
+            "1",
+            9
+          ],
+          [
+            "2",
+            "The food menu delivered very good value."
+          ]
+        ],
+        [
+          "ATMOSPHERE & EXPERIENCE",
+          10,
+          "An entire restaurant to ourselves. Rather special.",
+          [
+            "0",
+            "ATMOSPHERE & EXPERIENCE"
+          ],
+          [
+            "1",
+            10
+          ],
+          [
+            "2",
+            "An entire restaurant to ourselves. Rather special."
+          ]
+        ]
+      ],
       "body": [
         {
           "type": "heading",
@@ -84,136 +180,112 @@
           "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
         }
       ],
-      "scores": [
-        [
-          "FOOD",
-          9,
-          "Ambitious cooking with plenty of playfulness."
-        ],
-        [
-          "SETTING & VIEWS",
-          10,
-          "Mountains, vineyards and clouds that never sat still."
-        ],
-        [
-          "SERVICE",
-          9.5,
-          "Personal, polished and never hovering."
-        ],
-        [
-          "WINE",
-          8.5,
-          "Lovely Chardonnay; the pairing felt overpriced."
-        ],
-        [
-          "VALUE",
-          9,
-          "The food menu delivered very good value."
-        ],
-        [
-          "ATMOSPHERE & EXPERIENCE",
-          10,
-          "An entire restaurant to ourselves. Rather special."
-        ]
-      ],
+      "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
+      "wouldGoBack": "Absolutely.",
+      "section": "eat",
+      "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
+      "slug": "la-petite-colombe",
       "overall": "A lunch I enjoyed every bit as much as I admired.",
-      "wouldGoBack": "Absolutely."
+      "score": 9.5,
+      "location": "FRANSCHHOEK, SOUTH AFRICA",
+      "title": "La Petite Colombe",
+      "hero": ""
     },
     {
-      "slug": "nicole-istanbul",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "THE TAYLOR SCALE",
       "section": "eat",
+      "summary": "Twelve quietly impressive courses above Istanbul’s rooftops, delivered with polish and no need to shout.",
+      "slug": "nicole-istanbul",
+      "score": null,
       "location": "TÜRKİYE · ISTANBUL",
       "title": "Nicole: Smart Plates, Soft Piano, No Fuss",
-      "summary": "Twelve quietly impressive courses above Istanbul’s rooftops, delivered with polish and no need to shout.",
-      "score": null,
-      "scoreLabel": "THE TAYLOR SCALE",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "fine-mess-athens",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "THE TAYLOR SCALE",
       "section": "eat",
+      "summary": "Low-and-slow barbeque, modern Creole ideas and an odd name for a place that nails the detail.",
+      "slug": "fine-mess-athens",
+      "score": null,
       "location": "GREECE · ATHENS",
       "title": "Fine Mess: The Tasting Menu That Gets It Right",
-      "summary": "Low-and-slow barbeque, modern Creole ideas and an odd name for a place that nails the detail.",
-      "score": null,
-      "scoreLabel": "THE TAYLOR SCALE",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "skof-manchester",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "THE TAYLOR SCALE",
       "section": "eat",
+      "summary": "Relaxed, theatrical and very difficult to book for good reason.",
+      "slug": "skof-manchester",
+      "score": null,
       "location": "ENGLAND · MANCHESTER",
       "title": "SKOF: Tweezered Tartlets & Table Chats",
-      "summary": "Relaxed, theatrical and very difficult to book for good reason.",
-      "score": null,
-      "scoreLabel": "THE TAYLOR SCALE",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "huset-svalbard",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
       "section": "eat",
+      "summary": "Michelin-level cooking in Longyearbyen’s historic social hall, where every course tells part of Svalbard’s story.",
+      "slug": "huset-svalbard",
+      "score": 10,
       "location": "EUROPE · NORWAY · SVALBARD",
       "title": "Huset — Fine Dining at the Top of the World",
-      "summary": "Michelin-level cooking in Longyearbyen’s historic social hall, where every course tells part of Svalbard’s story.",
-      "score": 10,
-      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "the-tawny",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "THE TAYLOR SCALE",
       "section": "stay",
+      "summary": "A woodland hideaway with copper tubs, a free minibar and grounds that know exactly how photogenic they are.",
+      "slug": "the-tawny",
+      "score": null,
       "location": "ENGLAND · STAFFORDSHIRE",
       "title": "The Tawny: Bubble Baths, Fizz & Fairy Lights",
-      "summary": "A woodland hideaway with copper tubs, a free minibar and grounds that know exactly how photogenic they are.",
-      "score": null,
-      "scoreLabel": "THE TAYLOR SCALE",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "sommerro-house",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
       "section": "stay",
+      "summary": "Sommerro House might just be Oslo’s coolest address — a 1930s power company brought back to life as an Art Deco dream.",
+      "slug": "sommerro-house",
+      "score": 10,
       "location": "EUROPE · NORWAY · OSLO",
       "title": "Art Deco, Jazz & Oslo Cool",
-      "summary": "Sommerro House might just be Oslo’s coolest address — a 1930s power company brought back to life as an Art Deco dream.",
-      "score": 10,
-      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "explora-ii-athens-to-athens",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "9/10 · THE TRAVEL TAYLOR",
       "section": "cruise",
+      "summary": "Two weeks of Greek islands, Adriatic cities and a ship we were very happy to come back to.",
+      "slug": "explora-ii-athens-to-athens",
+      "score": 9,
       "location": "EXPLORA JOURNEYS · MEDITERRANEAN",
       "title": "EXPLORA II — Athens to Athens",
-      "summary": "Two weeks of Greek islands, Adriatic cities and a ship we were very happy to come back to.",
-      "score": 9,
-      "scoreLabel": "9/10 · THE TRAVEL TAYLOR",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     },
     {
-      "slug": "suite-life-at-sea",
+      "scores": [],
+      "body": [],
+      "scoreLabel": "OCEAN TERRACE SUITE",
       "section": "cruise",
+      "summary": "Dark wood, soft lighting, more storage than seems reasonable and a balcony as standard — which, frankly, should be law.",
+      "slug": "suite-life-at-sea",
+      "score": null,
       "location": "EXPLORA JOURNEYS · EXPLORA I",
       "title": "Our Suite Life at Sea",
-      "summary": "Dark wood, soft lighting, more storage than seems reasonable and a balcony as standard — which, frankly, should be law.",
-      "score": null,
-      "scoreLabel": "OCEAN TERRACE SUITE",
-      "hero": "",
-      "body": [],
-      "scores": []
+      "hero": ""
     }
   ]
 }

@@ -1,0 +1,13 @@
+THE TRAVEL TAYLOR — CMS V3
+
+This package restructures the Decap editor into:
+- Pages
+- STAY
+- EAT / DRINK
+- CRUISE
+
+Each review becomes its own editor entry, and new reviews can be created in the appropriate section.
+
+Upload all files in this folder to the ROOT of the GitHub repository in one commit.
+Existing config.yml, netlify.toml and content.json should be replaced.
+Do not delete index.html, app.js, styles.css, admin.html, logo files or home-hero.jpg.

@@ -1,0 +1,91 @@
+{
+  "order": 10,
+  "section": "eat",
+  "slug": "la-petite-colombe",
+  "location": "FRANSCHHOEK, SOUTH AFRICA",
+  "title": "La Petite Colombe",
+  "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
+  "score": 9.5,
+  "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
+  "hero": "",
+  "body": [
+    {
+      "type": "heading",
+      "text": "A table for two. A restaurant for two."
+    },
+    {
+      "type": "paragraph",
+      "text": "Then came the rather wonderful discovery that we had the entire restaurant to ourselves. It’s only happened to us once before, at Huset in Svalbard, and it still feels faintly improbable. All that space, and just us settling in for lunch."
+    },
+    {
+      "type": "paragraph",
+      "text": "Our table was beside the large black-framed windows, looking across the grounds towards the Franschhoek mountains. Clouds rolled across them throughout the meal, continually changing the view. Between courses, there was no shortage of things to look at."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inside, natural timber, muted greens and terracotta kept everything warm and comfortable. Plants and the views softened the polished edges. It was contemporary and design-led without making me feel I should sit up straighter."
+    },
+    {
+      "type": "paragraph",
+      "text": "And there was a real fireplace. It wasn’t lit, but it had clearly seen service on a recent cold evening: that lingering smell of wood smoke was still there. It’s one of my favourite smells. I’d love to come back on a cold Franschhoek evening and see that fire roaring."
+    },
+    {
+      "type": "heading",
+      "text": "Serious cooking, happily unserious presentation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The tasting menu was the main event, and I thought the food represented really good value. Given the standard of cooking, the amount of food and the work that went into its presentation, it felt generous. This was a substantial lunch, not a series of tiny gestures followed by a search for something to eat."
+    },
+    {
+      "type": "paragraph",
+      "text": "The opening bites arrived amongst greenery, herbs and edible flowers, with little picnic-like arrangements and enough detail to reward a second look. Then the practical business of eating them took over. Beautiful is lovely; beautiful and enjoyable is the point."
+    },
+    {
+      "type": "heading",
+      "text": "Theatre without the nonsense"
+    },
+    {
+      "type": "paragraph",
+      "text": "There was table-side preparation, there were little reveals, and there was mist drifting across the table. I’m very happy with a bit of theatre over lunch. My patience tends to depend on whether the food can hold its own once the smoke clears. Here, it could."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
+    }
+  ],
+  "scores": [
+    {
+      "category": "FOOD",
+      "score": 9,
+      "comment": "Ambitious cooking with plenty of playfulness."
+    },
+    {
+      "category": "SETTING & VIEWS",
+      "score": 10,
+      "comment": "Mountains, vineyards and clouds that never sat still."
+    },
+    {
+      "category": "SERVICE",
+      "score": 9.5,
+      "comment": "Personal, polished and never hovering."
+    },
+    {
+      "category": "WINE",
+      "score": 8.5,
+      "comment": "Lovely Chardonnay; the pairing felt overpriced."
+    },
+    {
+      "category": "VALUE",
+      "score": 9,
+      "comment": "The food menu delivered very good value."
+    },
+    {
+      "category": "ATMOSPHERE & EXPERIENCE",
+      "score": 10,
+      "comment": "An entire restaurant to ourselves. Rather special."
+    }
+  ],
+  "overall": "A lunch I enjoyed every bit as much as I admired.",
+  "wouldGoBack": "Absolutely."
+}

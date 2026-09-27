@@ -1,0 +1,10 @@
+UPLOAD THESE FILES TO THE ROOT OF YOUR EXISTING GITHUB REPOSITORY.
+
+This update:
+- adds the supplied giraffe photograph as the homepage hero
+- replaces the TT placeholder with your globe logo
+- adds the full Travel Taylor logo in the footer
+- restores the dark photographic homepage treatment and white overlay text
+- adds netlify.toml so Netlify publishes the repository root without trying Cecil
+
+When GitHub asks about existing filenames, commit the replacements.

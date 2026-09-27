@@ -20,7 +20,15 @@ function card(a){
 }
 function renderHome(d){
   const featured=d.articles.slice(0,4).map(card).join('');
-  return hero(d.site.homeKicker,d.site.homeHeadline,d.site.homeIntro)+`<section class="list">${featured}</section>`;
+  return `<section class="home-hero">
+    <div class="home-hero-inner">
+      <div class="home-kicker">${esc(d.site.homeKicker)}</div>
+      <h1>${esc(d.site.homeHeadline)}</h1>
+      <p>${esc(d.site.homeIntro)}</p>
+      <a class="home-cta" href="?view=eat">READ THE SOUTH AFRICA EDIT ↗</a>
+    </div>
+  </section>
+  <section class="list home-featured">${featured}</section>`;
 }
 function renderSection(d,key){
   if(key==='about'){

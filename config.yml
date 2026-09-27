@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: TheTravelTaylor/The-travel-taylor
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site_content"
+    label: "The Travel Taylor"
+    files:
+      - name: "content"
+        label: "Site content"
+        file: "content.json"
+        format: "json"
+        fields:
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Homepage kicker", name: "homeKicker", widget: "string"}
+              - {label: "Homepage headline", name: "homeHeadline", widget: "string"}
+              - {label: "Homepage intro", name: "homeIntro", widget: "text"}
+
+          - label: "Sections"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Stay"
+                name: "stay"
+                widget: "object"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Eat / Drink"
+                name: "eat"
+                widget: "object"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+              - label: "Cruise"
+                name: "cruise"
+                widget: "object"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "string"}
+                  - {label: "Intro", name: "intro", widget: "text"}
+              - label: "About"
+                name: "about"
+                widget: "object"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Headline", name: "headline", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Slug", name: "slug", widget: "string"}
+              - {label: "Section", name: "section", widget: "select", options: ["stay","eat","cruise"]}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
+              - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
+              - {label: "Hero image", name: "hero", widget: "image", required: false}
+              - label: "Body"
+                name: "body"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Type", name: "type", widget: "select", options: ["heading","paragraph"]}
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Scores"
+                name: "scores"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Category", name: "0", widget: "string"}
+                  - {label: "Score", name: "1", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
+                  - {label: "Comment", name: "2", widget: "text"}
+              - {label: "Overall comment", name: "overall", widget: "text", required: false}
+              - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}

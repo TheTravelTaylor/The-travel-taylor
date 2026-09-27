@@ -1,0 +1,219 @@
+{
+  "site": {
+    "name": "The Travel Taylor",
+    "tagline": "Slow travel. Good food. Better drinks.",
+    "homeKicker": "THE TRAVEL TAYLOR · EST. 2026",
+    "homeHeadline": "Travel slowly. Eat well. Order another bottle.",
+    "homeIntro": "Personal notes on considered journeys, memorable tables and the places worth making time for."
+  },
+  "sections": {
+    "stay": {
+      "label": "STAY",
+      "headline": "Hotels worth checking into.",
+      "intro": "Beautiful rooms, memorable bars and the honest details that decide whether somewhere is actually worth the key card."
+    },
+    "eat": {
+      "label": "EAT / DRINK",
+      "headline": "Tables worth travelling for.",
+      "intro": "From tasting menus at the edge of the world to bars that understand a properly cold martini."
+    },
+    "cruise": {
+      "label": "CRUISE",
+      "headline": "Life at sea, done properly.",
+      "intro": "Suites, ships and unhurried days at sea — with honest notes on the details that make the difference."
+    },
+    "about": {
+      "label": "ABOUT THE JOURNAL",
+      "headline": "Travel should feel like time well spent.",
+      "body": "I’m Shaun. The Travel Taylor is where I keep the places, meals and journeys that are worth remembering — along with the honest bits that glossy travel writing sometimes edits out. I like beautiful hotels, thoughtful service, excellent food and a proper drink. I also like freedom: the kind that comes from planning the important things well, then leaving enough space for the unexpected."
+    }
+  },
+  "articles": [
+    {
+      "slug": "la-petite-colombe",
+      "section": "eat",
+      "location": "FRANSCHHOEK, SOUTH AFRICA",
+      "title": "La Petite Colombe",
+      "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
+      "score": 9.5,
+      "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
+      "hero": "",
+      "body": [
+        {
+          "type": "heading",
+          "text": "A table for two. A restaurant for two."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then came the rather wonderful discovery that we had the entire restaurant to ourselves. It’s only happened to us once before, at Huset in Svalbard, and it still feels faintly improbable. All that space, and just us settling in for lunch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Our table was beside the large black-framed windows, looking across the grounds towards the Franschhoek mountains. Clouds rolled across them throughout the meal, continually changing the view. Between courses, there was no shortage of things to look at."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inside, natural timber, muted greens and terracotta kept everything warm and comfortable. Plants and the views softened the polished edges. It was contemporary and design-led without making me feel I should sit up straighter."
+        },
+        {
+          "type": "paragraph",
+          "text": "And there was a real fireplace. It wasn’t lit, but it had clearly seen service on a recent cold evening: that lingering smell of wood smoke was still there. It’s one of my favourite smells. I’d love to come back on a cold Franschhoek evening and see that fire roaring."
+        },
+        {
+          "type": "heading",
+          "text": "Serious cooking, happily unserious presentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "The tasting menu was the main event, and I thought the food represented really good value. Given the standard of cooking, the amount of food and the work that went into its presentation, it felt generous. This was a substantial lunch, not a series of tiny gestures followed by a search for something to eat."
+        },
+        {
+          "type": "paragraph",
+          "text": "The opening bites arrived amongst greenery, herbs and edible flowers, with little picnic-like arrangements and enough detail to reward a second look. Then the practical business of eating them took over. Beautiful is lovely; beautiful and enjoyable is the point."
+        },
+        {
+          "type": "heading",
+          "text": "Theatre without the nonsense"
+        },
+        {
+          "type": "paragraph",
+          "text": "There was table-side preparation, there were little reveals, and there was mist drifting across the table. I’m very happy with a bit of theatre over lunch. My patience tends to depend on whether the food can hold its own once the smoke clears. Here, it could."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
+        }
+      ],
+      "scores": [
+        [
+          "FOOD",
+          9,
+          "Ambitious cooking with plenty of playfulness."
+        ],
+        [
+          "SETTING & VIEWS",
+          10,
+          "Mountains, vineyards and clouds that never sat still."
+        ],
+        [
+          "SERVICE",
+          9.5,
+          "Personal, polished and never hovering."
+        ],
+        [
+          "WINE",
+          8.5,
+          "Lovely Chardonnay; the pairing felt overpriced."
+        ],
+        [
+          "VALUE",
+          9,
+          "The food menu delivered very good value."
+        ],
+        [
+          "ATMOSPHERE & EXPERIENCE",
+          10,
+          "An entire restaurant to ourselves. Rather special."
+        ]
+      ],
+      "overall": "A lunch I enjoyed every bit as much as I admired.",
+      "wouldGoBack": "Absolutely."
+    },
+    {
+      "slug": "nicole-istanbul",
+      "section": "eat",
+      "location": "TÜRKİYE · ISTANBUL",
+      "title": "Nicole: Smart Plates, Soft Piano, No Fuss",
+      "summary": "Twelve quietly impressive courses above Istanbul’s rooftops, delivered with polish and no need to shout.",
+      "score": null,
+      "scoreLabel": "THE TAYLOR SCALE",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "fine-mess-athens",
+      "section": "eat",
+      "location": "GREECE · ATHENS",
+      "title": "Fine Mess: The Tasting Menu That Gets It Right",
+      "summary": "Low-and-slow barbeque, modern Creole ideas and an odd name for a place that nails the detail.",
+      "score": null,
+      "scoreLabel": "THE TAYLOR SCALE",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "skof-manchester",
+      "section": "eat",
+      "location": "ENGLAND · MANCHESTER",
+      "title": "SKOF: Tweezered Tartlets & Table Chats",
+      "summary": "Relaxed, theatrical and very difficult to book for good reason.",
+      "score": null,
+      "scoreLabel": "THE TAYLOR SCALE",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "huset-svalbard",
+      "section": "eat",
+      "location": "EUROPE · NORWAY · SVALBARD",
+      "title": "Huset — Fine Dining at the Top of the World",
+      "summary": "Michelin-level cooking in Longyearbyen’s historic social hall, where every course tells part of Svalbard’s story.",
+      "score": 10,
+      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "the-tawny",
+      "section": "stay",
+      "location": "ENGLAND · STAFFORDSHIRE",
+      "title": "The Tawny: Bubble Baths, Fizz & Fairy Lights",
+      "summary": "A woodland hideaway with copper tubs, a free minibar and grounds that know exactly how photogenic they are.",
+      "score": null,
+      "scoreLabel": "THE TAYLOR SCALE",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "sommerro-house",
+      "section": "stay",
+      "location": "EUROPE · NORWAY · OSLO",
+      "title": "Art Deco, Jazz & Oslo Cool",
+      "summary": "Sommerro House might just be Oslo’s coolest address — a 1930s power company brought back to life as an Art Deco dream.",
+      "score": 10,
+      "scoreLabel": "10/10 · THE TRAVEL TAYLOR",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "explora-ii-athens-to-athens",
+      "section": "cruise",
+      "location": "EXPLORA JOURNEYS · MEDITERRANEAN",
+      "title": "EXPLORA II — Athens to Athens",
+      "summary": "Two weeks of Greek islands, Adriatic cities and a ship we were very happy to come back to.",
+      "score": 9,
+      "scoreLabel": "9/10 · THE TRAVEL TAYLOR",
+      "hero": "",
+      "body": [],
+      "scores": []
+    },
+    {
+      "slug": "suite-life-at-sea",
+      "section": "cruise",
+      "location": "EXPLORA JOURNEYS · EXPLORA I",
+      "title": "Our Suite Life at Sea",
+      "summary": "Dark wood, soft lighting, more storage than seems reasonable and a balcony as standard — which, frankly, should be law.",
+      "score": null,
+      "scoreLabel": "OCEAN TERRACE SUITE",
+      "hero": "",
+      "body": [],
+      "scores": []
+    }
+  ]
+}

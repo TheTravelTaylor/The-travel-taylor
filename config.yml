@@ -81,34 +81,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -144,34 +136,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -211,34 +195,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -274,34 +250,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -337,34 +305,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -400,34 +360,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -463,34 +415,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -530,34 +474,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -593,34 +529,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"
@@ -663,34 +591,26 @@ collections:
             widget: "list"
             required: false
             collapsed: true
-            types:
-              - label: "Paragraph"
-                name: "paragraph"
-                widget: "object"
-                fields:
-                  - {label: "Text", name: "text", widget: "text"}
-              - label: "Heading"
-                name: "heading"
-                widget: "object"
-                fields:
-                  - {label: "Heading", name: "text", widget: "string"}
-              - label: "Full-width photo"
-                name: "image"
-                widget: "object"
-                fields:
-                  - {label: "Photo", name: "image", widget: "image"}
-                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
-                  - {label: "Caption", name: "caption", widget: "string", required: false}
-              - label: "Two-photo layout"
-                name: "image_pair"
-                widget: "object"
-                fields:
-                  - {label: "Left photo", name: "image1", widget: "image"}
-                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
-                  - {label: "Right photo", name: "image2", widget: "image"}
-                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+            summary: "{{fields.type}}"
+            fields:
+              - label: "Block type"
+                name: "type"
+                widget: "select"
+                options:
+                  - {label: "Paragraph", value: "paragraph"}
+                  - {label: "Heading", value: "heading"}
+                  - {label: "Full-width photo", value: "image"}
+                  - {label: "Two-photo layout", value: "image_pair"}
+              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
+              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
+              - {label: "Alt text", name: "alt", widget: "string", required: false}
+              - {label: "Caption", name: "caption", widget: "string", required: false}
+              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
+              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+              - {label: "Left caption", name: "caption1", widget: "string", required: false}
+              - {label: "Right photo", name: "image2", widget: "image", required: false}
+              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+              - {label: "Right caption", name: "caption2", widget: "string", required: false}
 
           - label: "Scores"
             name: "scores"

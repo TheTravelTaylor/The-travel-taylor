@@ -1,0 +1,3 @@
+Upload ONLY config.yml and build.js to the root of the GitHub repository and commit them.
+They replace the existing files with the same names.
+READ-ME.txt does not need to be uploaded.

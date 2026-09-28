@@ -2,19 +2,33 @@ const fs = require('fs');
 const path = require('path');
 
 function readJson(file) {
-  return JSON.parse(fs.readFileSync(path.join(__dirname, file), 'utf8'));
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-const site = readJson('homepage.page');
+function collectReviewFiles() {
+  const rootFiles = fs.readdirSync(__dirname)
+    .filter(file => file.endsWith('.article'))
+    .map(file => path.join(__dirname, file));
+
+  const reviewsDir = path.join(__dirname, 'reviews');
+  let newFiles = [];
+  if (fs.existsSync(reviewsDir)) {
+    newFiles = fs.readdirSync(reviewsDir)
+      .filter(file => file.endsWith('.json'))
+      .map(file => path.join(reviewsDir, file));
+  }
+  return [...rootFiles, ...newFiles];
+}
+
+const site = readJson(path.join(__dirname, 'homepage.page'));
 const sections = {
-  stay: readJson('stay.page'),
-  eat: readJson('eat.page'),
-  cruise: readJson('cruise.page'),
-  about: readJson('about.page')
+  stay: readJson(path.join(__dirname, 'stay.page')),
+  eat: readJson(path.join(__dirname, 'eat.page')),
+  cruise: readJson(path.join(__dirname, 'cruise.page')),
+  about: readJson(path.join(__dirname, 'about.page'))
 };
 
-const articles = fs.readdirSync(__dirname)
-  .filter(file => file.endsWith('.article'))
+const articles = collectReviewFiles()
   .map(file => readJson(file))
   .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
   .map(article => {
@@ -26,9 +40,9 @@ const articles = fs.readdirSync(__dirname)
     return clean;
   });
 
-const output = { site, sections, articles };
 fs.writeFileSync(
   path.join(__dirname, 'content.json'),
-  JSON.stringify(output, null, 2) + '\n'
+  JSON.stringify({ site, sections, articles }, null, 2) + '\n'
 );
+
 console.log(`Built content.json with ${articles.length} articles.`);

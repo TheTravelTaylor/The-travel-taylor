@@ -42,7 +42,12 @@
     },
     {
       "type": "paragraph",
-      "text": "Our pre-booked taxi failed to turn up, although secretly we were quite pleased — we'd wanted an excuse to use one of Franschhoek's tuk tuks anyway.",
+      "text": "Our booked taxi didn’t turn up. Secretly, we were quite pleased: we’d wanted an excuse to try one of Franschhoek’s tuk tuks. A bright blue one duly took us to Leeu Estates, where we discovered that tuk tuks aren’t allowed through the gates. So we transferred to a golf buggy for the final stretch to La Petite Colombe. Two vehicles for one lunch. Apparently we like to make an entrance.",
+      "image1": "/uploads/arrival1.jpg",
+      "image2": "/uploads/grounds2.jpg"
+    },
+    {
+      "type": "image_pair",
       "image1": "/uploads/arrival1.jpg",
       "image2": "/uploads/grounds2.jpg"
     },

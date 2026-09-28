@@ -73,14 +73,14 @@
       "text": "Inside, natural timber, muted greens and terracotta kept everything warm and comfortable. Plants and the views softened the polished edges. It was contemporary and design-led without making me feel I should sit up straighter."
     },
     {
+      "type": "paragraph",
+      "text": "And there was a real fireplace. It wasn’t lit, but it had clearly seen service on a recent cold evening: that lingering smell of wood smoke was still there. It’s one of my favourite smells. I’d love to come back on a cold Franschhoek evening and see that fire roaring."
+    },
+    {
       "type": "image",
       "image": "/uploads/interiors.jpg",
       "text": "",
       "alt": "Interiors"
-    },
-    {
-      "type": "paragraph",
-      "text": "And there was a real fireplace. It wasn’t lit, but it had clearly seen service on a recent cold evening: that lingering smell of wood smoke was still there. It’s one of my favourite smells. I’d love to come back on a cold Franschhoek evening and see that fire roaring."
     },
     {
       "type": "heading",
@@ -92,19 +92,47 @@
     },
     {
       "type": "paragraph",
-      "text": "The opening bites arrived amongst greenery, herbs and edible flowers, with little picnic-like arrangements and enough detail to reward a second look. Then the practical business of eating them took over. Beautiful is lovely; beautiful and enjoyable is the point."
+      "text": "The opening bites arrived amongst greenery, herbs and edible flowers, with little picnic-like arrangements and enough detail to reward a second look. Then the practical business of eating them took over. Beautiful is lovely; beautiful and enjoyable is the point.",
+      "alt": ""
+    },
+    {
+      "type": "image",
+      "image": "/uploads/garden.jpg",
+      "alt": "Snacks"
+    },
+    {
+      "type": "image_pair",
+      "image": "",
+      "image1": "/uploads/bite.jpg",
+      "image2": "/uploads/shell.jpg",
+      "alt": "Snacks 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
+    },
+    {
+      "type": "image",
+      "alt": "Bread",
+      "image": "/uploads/bread.jpg"
     },
     {
       "type": "heading",
       "text": "Theatre without the nonsense"
     },
     {
+      "type": "image",
+      "image": "/uploads/ceramics.jpg",
+      "alt": "Ceramics"
+    },
+    {
       "type": "paragraph",
       "text": "There was table-side preparation, there were little reveals, and there was mist drifting across the table. I’m very happy with a bit of theatre over lunch. My patience tends to depend on whether the food can hold its own once the smoke clears. Here, it could."
     },
     {
-      "type": "paragraph",
-      "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
+      "type": "image",
+      "image": "/uploads/tableside.jpg",
+      "alt": "Tableside"
     },
     {
       "type": "heading",
@@ -112,7 +140,18 @@
     },
     {
       "type": "paragraph",
-      "text": "I've eaten in restaurants where, somewhere around course eight, you realise you've stopped enjoying yourself. Another technically perfect plate arrives, somebody explains fourteen ingredients and something else has inevitably been fermented for six months. Eventually, you just want chips. La Petite Colombe never reached that point. The theatre complemented the cooking rather than compensating for it."
+      "text": "Tasting menus can reach a point where another technically perfect plate arrives, someone explains fourteen ingredients, something has inevitably been fermented for six months, and eventually you just want chips. \n\nLa Petite Colombe never reached that point. The surprises kept the meal enjoyable, and the theatre complemented the cooking rather than compensating for it."
+    },
+    {
+      "type": "image",
+      "image": "/uploads/plating.jpg",
+      "alt": "Plating"
+    },
+    {
+      "type": "image_pair",
+      "alt": "theatre and main",
+      "image1": "/uploads/theatre-1-.jpg",
+      "image2": "/uploads/main.jpg"
     },
     {
       "type": "heading",
@@ -143,16 +182,16 @@
       "text": "A little Wonka at the end"
     },
     {
+      "type": "heading",
+      "text": "Beyond the table"
+    },
+    {
       "type": "paragraph",
       "text": "The desserts kept the playfulness going: sculptural bowls, bright colours and tiny finishing touches, followed by petits fours that took the miniature-garden idea to its logical, chocolate-filled conclusion."
     },
     {
       "type": "paragraph",
       "text": "Greenery, colourful sweets and tiny Tonka Bar elements put the final presentation somewhere between fine dining, a miniature garden and Willy Wonka. A very agreeable place to end up. By then, any suspicion that this might be an afternoon of solemn appreciation had thoroughly disappeared."
-    },
-    {
-      "type": "heading",
-      "text": "Beyond the table"
     },
     {
       "type": "paragraph",

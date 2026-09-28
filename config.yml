@@ -74,16 +74,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -111,16 +137,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -152,16 +204,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -189,16 +267,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -226,16 +330,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -263,16 +393,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -300,16 +456,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -341,16 +523,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -378,16 +586,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"
@@ -422,16 +656,42 @@ collections:
           - {label: "Summary", name: "summary", widget: "text"}
           - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
           - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false}
+          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
+
           - label: "Article"
             name: "body"
             widget: "list"
             required: false
             collapsed: true
-            summary: "{{fields.type}} — {{fields.text}}"
-            fields:
-              - {label: "Type", name: "type", widget: "select", options: ["heading", "paragraph"]}
-              - {label: "Text", name: "text", widget: "text"}
+            types:
+              - label: "Paragraph"
+                name: "paragraph"
+                widget: "object"
+                fields:
+                  - {label: "Text", name: "text", widget: "text"}
+              - label: "Heading"
+                name: "heading"
+                widget: "object"
+                fields:
+                  - {label: "Heading", name: "text", widget: "string"}
+              - label: "Full-width photo"
+                name: "image"
+                widget: "object"
+                fields:
+                  - {label: "Photo", name: "image", widget: "image"}
+                  - {label: "Alt text", name: "alt", widget: "string", required: false, hint: "Briefly describe the photo for accessibility."}
+                  - {label: "Caption", name: "caption", widget: "string", required: false}
+              - label: "Two-photo layout"
+                name: "image_pair"
+                widget: "object"
+                fields:
+                  - {label: "Left photo", name: "image1", widget: "image"}
+                  - {label: "Left alt text", name: "alt1", widget: "string", required: false}
+                  - {label: "Left caption", name: "caption1", widget: "string", required: false}
+                  - {label: "Right photo", name: "image2", widget: "image"}
+                  - {label: "Right alt text", name: "alt2", widget: "string", required: false}
+                  - {label: "Right caption", name: "caption2", widget: "string", required: false}
+
           - label: "Scores"
             name: "scores"
             widget: "list"

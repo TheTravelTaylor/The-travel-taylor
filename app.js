@@ -1,4 +1,3 @@
-
 async function load(){
   const res = await fetch('content.json',{cache:'no-store'});
   const data = await res.json();
@@ -39,15 +38,41 @@ function renderSection(d,key){
   const cards=d.articles.filter(a=>a.section===key).map(card).join('');
   return hero(s.label,s.headline,s.intro)+`<section class="list">${cards}</section>`;
 }
+function figure(src,alt='',caption='',cls=''){
+  if(!src) return '';
+  return `<figure class="article-photo ${cls}">
+    <img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">
+    ${caption?`<figcaption>${esc(caption)}</figcaption>`:''}
+  </figure>`;
+}
+function renderBodyBlock(b){
+  if(!b) return '';
+  if(b.type==='heading') return `<h2>${esc(b.text)}</h2>`;
+  if(b.type==='paragraph') return `<p>${esc(b.text)}</p>`;
+  if(b.type==='image') return figure(b.image,b.alt,b.caption,'article-photo-full');
+  if(b.type==='image_pair'){
+    return `<div class="article-photo-pair">
+      ${figure(b.image1,b.alt1,b.caption1,'')}
+      ${figure(b.image2,b.alt2,b.caption2,'')}
+    </div>`;
+  }
+  return b.text?`<p>${esc(b.text)}</p>`:'';
+}
 function renderArticle(d,slug){
   const a=d.articles.find(x=>x.slug===slug);
   if(!a) return `<section class="hero"><h1>Not found.</h1></section>`;
-  const body=(a.body||[]).map(b=>b.type==='heading'?`<h2>${esc(b.text)}</h2>`:`<p>${esc(b.text)}</p>`).join('');
-  const scores=(a.scores||[]).map(s=>`<div class="score-row"><div><div class="score-name">${esc(s[0])}</div><div class="score-number">${esc(s[1])}/10</div></div><div class="score-note">${esc(s[2])}</div></div>`).join('');
+  const body=(a.body||[]).map(renderBodyBlock).join('');
+  const scores=(a.scores||[]).map(s=>{
+    const category=Array.isArray(s)?s[0]:s.category;
+    const score=Array.isArray(s)?s[1]:s.score;
+    const note=Array.isArray(s)?s[2]:s.comment;
+    return `<div class="score-row"><div><div class="score-name">${esc(category)}</div><div class="score-number">${esc(score)}/10</div></div><div class="score-note">${esc(note)}</div></div>`;
+  }).join('');
   return `<article class="article">
     <div class="article-location">${esc(a.location)}</div>
     <h1 class="article-title">${esc(a.title)}</h1>
     <p class="article-lead">${esc(a.summary)}</p>
+    ${a.hero?`<figure class="article-hero"><img src="${esc(a.hero)}" alt="" fetchpriority="high"></figure>`:''}
     <div class="article-body">${body || '<p>Full review copy will be migrated next.</p>'}</div>
     ${scores?`<section class="score-block"><div class="score-title">THE TRAVEL TAYLOR SCORE</div>${scores}
       <div class="overall"><div class="score-title">OVERALL TRAVEL TAYLOR SCORE</div><p class="about-copy">${esc(a.overall||'')}</p><div class="number">${esc(a.score)}/10</div></div>

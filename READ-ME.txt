@@ -1,3 +1,17 @@
-Upload ONLY config.yml and build.js to the root of the GitHub repository and commit them.
-They replace the existing files with the same names.
-READ-ME.txt does not need to be uploaded.
+THE TRAVEL TAYLOR — PHOTO CMS UPGRADE
+
+Upload ONLY these three files to the ROOT of the GitHub repository:
+- config.yml
+- app.js
+- styles.css
+
+Replace the existing files with the same names and commit the changes.
+
+This upgrade adds:
+- Full-width photo blocks
+- Two-photo blocks
+- Optional captions and alt text
+- Article hero images shown at the top of the review
+- Existing paragraph/heading content remains compatible
+
+Do not upload this README.

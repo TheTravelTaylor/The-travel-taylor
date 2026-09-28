@@ -2,626 +2,1437 @@ backend:
   name: github
   repo: TheTravelTaylor/The-travel-taylor
   branch: main
-
 publish_mode: simple
-media_folder: "uploads"
-public_folder: "/uploads"
-
+media_folder: uploads
+public_folder: /uploads
 editor:
   preview: false
-
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "homepage"
-        label: "Homepage"
-        file: "homepage.page"
-        format: "json"
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Tagline", name: "tagline", widget: "string"}
-          - {label: "Homepage kicker", name: "homeKicker", widget: "string"}
-          - {label: "Homepage headline", name: "homeHeadline", widget: "string"}
-          - {label: "Homepage intro", name: "homeIntro", widget: "text"}
-      - name: "about"
-        label: "About"
-        file: "about.page"
-        format: "json"
-        fields:
-          - {label: "Label", name: "label", widget: "string"}
-          - {label: "Headline", name: "headline", widget: "string"}
-          - {label: "Body", name: "body", widget: "text"}
-      - name: "stay_page"
-        label: "STAY landing page"
-        file: "stay.page"
-        format: "json"
-        fields:
-          - {label: "Label", name: "label", widget: "string"}
-          - {label: "Headline", name: "headline", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "text"}
-      - name: "eat_page"
-        label: "EAT / DRINK landing page"
-        file: "eat.page"
-        format: "json"
-        fields:
-          - {label: "Label", name: "label", widget: "string"}
-          - {label: "Headline", name: "headline", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "text"}
-      - name: "cruise_page"
-        label: "CRUISE landing page"
-        file: "cruise.page"
-        format: "json"
-        fields:
-          - {label: "Label", name: "label", widget: "string"}
-          - {label: "Headline", name: "headline", widget: "string"}
-          - {label: "Intro", name: "intro", widget: "text"}
-
-  - name: "stay"
-    label: "STAY"
-    files:
-      - name: "the_tawny"
-        label: "The Tawny: Bubble Baths, Fizz & Fairy Lights"
-        file: "the-tawny.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "sommerro_house"
-        label: "Art Deco, Jazz & Oslo Cool"
-        file: "sommerro-house.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-
-  - name: "eat"
-    label: "EAT / DRINK"
-    files:
-      - name: "la_petite_colombe"
-        label: "La Petite Colombe"
-        file: "la-petite-colombe.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "nicole_istanbul"
-        label: "Nicole: Smart Plates, Soft Piano, No Fuss"
-        file: "nicole-istanbul.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "fine_mess_athens"
-        label: "Fine Mess: The Tasting Menu That Gets It Right"
-        file: "fine-mess-athens.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "skof_manchester"
-        label: "SKOF: Tweezered Tartlets & Table Chats"
-        file: "skof-manchester.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "huset_svalbard"
-        label: "Huset — Fine Dining at the Top of the World"
-        file: "huset-svalbard.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-
-  - name: "cruise"
-    label: "CRUISE"
-    files:
-      - name: "explora_ii"
-        label: "EXPLORA II — Athens to Athens"
-        file: "explora-ii-athens-to-athens.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-      - name: "suite_life"
-        label: "Our Suite Life at Sea"
-        file: "suite-life-at-sea.article"
-        format: "json"
-        fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
-
-  - name: "new_reviews"
-    label: "ADD NEW REVIEW"
-    label_singular: "Review"
-    folder: "reviews"
-    extension: "json"
-    format: "json"
-    create: true
-    slug: "{{fields.slug}}"
-    editor:
-      preview: false
+- name: pages
+  label: Pages
+  format: json
+  extension: page
+  files:
+  - name: homepage
+    label: Homepage
+    file: homepage.page
     fields:
-
-          - {label: "Section", name: "section", widget: "select", options: ["stay", "eat", "cruise"]}
-          - {label: "Display order", name: "order", widget: "number", value_type: "int", required: false}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "slug", widget: "string", hint: "Lowercase words separated by hyphens."}
-          - {label: "Location", name: "location", widget: "string"}
-          - {label: "Summary", name: "summary", widget: "text"}
-          - {label: "Overall score", name: "score", widget: "number", required: false, value_type: "float", min: 0, max: 10, step: 0.5}
-          - {label: "Score label", name: "scoreLabel", widget: "string", required: false}
-          - {label: "Hero image", name: "hero", widget: "image", required: false, hint: "Used on the article card and at the top of the review."}
-
-          - label: "Article"
-            name: "body"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.type}}"
-            fields:
-              - label: "Block type"
-                name: "type"
-                widget: "select"
-                options:
-                  - {label: "Paragraph", value: "paragraph"}
-                  - {label: "Heading", value: "heading"}
-                  - {label: "Full-width photo", value: "image"}
-                  - {label: "Two-photo layout", value: "image_pair"}
-              - {label: "Text / heading", name: "text", widget: "text", required: false, hint: "Use this for paragraph or heading blocks."}
-              - {label: "Photo", name: "image", widget: "image", required: false, hint: "Use this for a full-width photo block."}
-              - {label: "Alt text", name: "alt", widget: "string", required: false}
-              - {label: "Caption", name: "caption", widget: "string", required: false}
-              - {label: "Left photo", name: "image1", widget: "image", required: false, hint: "Use these two fields for a two-photo block."}
-              - {label: "Left alt text", name: "alt1", widget: "string", required: false}
-              - {label: "Left caption", name: "caption1", widget: "string", required: false}
-              - {label: "Right photo", name: "image2", widget: "image", required: false}
-              - {label: "Right alt text", name: "alt2", widget: "string", required: false}
-              - {label: "Right caption", name: "caption2", widget: "string", required: false}
-
-          - label: "Scores"
-            name: "scores"
-            widget: "list"
-            required: false
-            collapsed: true
-            summary: "{{fields.category}} — {{fields.score}}/10"
-            fields:
-              - {label: "Category", name: "category", widget: "string"}
-              - {label: "Score", name: "score", widget: "number", value_type: "float", min: 0, max: 10, step: 0.5}
-              - {label: "Comment", name: "comment", widget: "text"}
-          - {label: "Overall comment", name: "overall", widget: "text", required: false}
-          - {label: "Would I go back?", name: "wouldGoBack", widget: "string", required: false}
-
+    - label: Name
+      name: name
+      widget: string
+    - label: Tagline
+      name: tagline
+      widget: string
+    - label: Homepage kicker
+      name: homeKicker
+      widget: string
+    - label: Homepage headline
+      name: homeHeadline
+      widget: string
+    - label: Homepage intro
+      name: homeIntro
+      widget: text
+  - name: about
+    label: About
+    file: about.page
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: string
+    - label: Body
+      name: body
+      widget: text
+  - name: stay_page
+    label: STAY landing page
+    file: stay.page
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: string
+    - label: Intro
+      name: intro
+      widget: text
+  - name: eat_page
+    label: EAT / DRINK landing page
+    file: eat.page
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: string
+    - label: Intro
+      name: intro
+      widget: text
+  - name: cruise_page
+    label: CRUISE landing page
+    file: cruise.page
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: string
+    - label: Intro
+      name: intro
+      widget: text
+- name: stay
+  label: STAY
+  format: json
+  extension: article
+  files:
+  - name: the_tawny
+    label: 'The Tawny: Bubble Baths, Fizz & Fairy Lights'
+    file: the-tawny.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: sommerro_house
+    label: Art Deco, Jazz & Oslo Cool
+    file: sommerro-house.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+- name: eat
+  label: EAT / DRINK
+  format: json
+  extension: article
+  files:
+  - name: la_petite_colombe
+    label: La Petite Colombe
+    file: la-petite-colombe.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: nicole_istanbul
+    label: 'Nicole: Smart Plates, Soft Piano, No Fuss'
+    file: nicole-istanbul.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: fine_mess_athens
+    label: 'Fine Mess: The Tasting Menu That Gets It Right'
+    file: fine-mess-athens.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: skof_manchester
+    label: 'SKOF: Tweezered Tartlets & Table Chats'
+    file: skof-manchester.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: huset_svalbard
+    label: Huset — Fine Dining at the Top of the World
+    file: huset-svalbard.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+- name: cruise
+  label: CRUISE
+  format: json
+  extension: article
+  files:
+  - name: explora_ii
+    label: EXPLORA II — Athens to Athens
+    file: explora-ii-athens-to-athens.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+  - name: suite_life
+    label: Our Suite Life at Sea
+    file: suite-life-at-sea.article
+    fields:
+    - label: Section
+      name: section
+      widget: select
+      options:
+      - stay
+      - eat
+      - cruise
+    - label: Display order
+      name: order
+      widget: number
+      value_type: int
+      required: false
+    - label: Title
+      name: title
+      widget: string
+    - label: Slug
+      name: slug
+      widget: string
+      hint: Lowercase words separated by hyphens.
+    - label: Location
+      name: location
+      widget: string
+    - label: Summary
+      name: summary
+      widget: text
+    - label: Overall score
+      name: score
+      widget: number
+      required: false
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Score label
+      name: scoreLabel
+      widget: string
+      required: false
+    - label: Hero image
+      name: hero
+      widget: image
+      required: false
+      hint: Used on the article card and at the top of the review.
+    - label: Article
+      name: body
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.type}}'
+      fields:
+      - label: Block type
+        name: type
+        widget: select
+        options:
+        - label: Paragraph
+          value: paragraph
+        - label: Heading
+          value: heading
+        - label: Full-width photo
+          value: image
+        - label: Two-photo layout
+          value: image_pair
+      - label: Text / heading
+        name: text
+        widget: text
+        required: false
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Alt text
+        name: alt
+        widget: string
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Left photo
+        name: image1
+        widget: image
+        required: false
+      - label: Left alt text
+        name: alt1
+        widget: string
+        required: false
+      - label: Left caption
+        name: caption1
+        widget: string
+        required: false
+      - label: Right photo
+        name: image2
+        widget: image
+        required: false
+      - label: Right alt text
+        name: alt2
+        widget: string
+        required: false
+      - label: Right caption
+        name: caption2
+        widget: string
+        required: false
+    - label: Scores
+      name: scores
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.category}} — {{fields.score}}/10'
+      fields:
+      - label: Category
+        name: category
+        widget: string
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        max: 10
+        step: 0.5
+      - label: Comment
+        name: comment
+        widget: text
+    - label: Overall comment
+      name: overall
+      widget: text
+      required: false
+    - label: Would I go back?
+      name: wouldGoBack
+      widget: string
+      required: false
+- name: new_reviews
+  label: ADD NEW REVIEW
+  label_singular: Review
+  folder: reviews
+  extension: json
+  format: json
+  create: true
+  slug: '{{fields.slug}}'
+  editor:
+    preview: false
+  fields:
+  - label: Section
+    name: section
+    widget: select
+    options:
+    - stay
+    - eat
+    - cruise
+  - label: Display order
+    name: order
+    widget: number
+    value_type: int
+    required: false
+  - label: Title
+    name: title
+    widget: string
+  - label: Slug
+    name: slug
+    widget: string
+    hint: Lowercase words separated by hyphens.
+  - label: Location
+    name: location
+    widget: string
+  - label: Summary
+    name: summary
+    widget: text
+  - label: Overall score
+    name: score
+    widget: number
+    required: false
+    value_type: float
+    min: 0
+    max: 10
+    step: 0.5
+  - label: Score label
+    name: scoreLabel
+    widget: string
+    required: false
+  - label: Hero image
+    name: hero
+    widget: image
+    required: false
+    hint: Used on the article card and at the top of the review.
+  - label: Article
+    name: body
+    widget: list
+    required: false
+    collapsed: true
+    summary: '{{fields.type}}'
+    fields:
+    - label: Block type
+      name: type
+      widget: select
+      options:
+      - label: Paragraph
+        value: paragraph
+      - label: Heading
+        value: heading
+      - label: Full-width photo
+        value: image
+      - label: Two-photo layout
+        value: image_pair
+    - label: Text / heading
+      name: text
+      widget: text
+      required: false
+    - label: Photo
+      name: image
+      widget: image
+      required: false
+    - label: Alt text
+      name: alt
+      widget: string
+      required: false
+    - label: Caption
+      name: caption
+      widget: string
+      required: false
+    - label: Left photo
+      name: image1
+      widget: image
+      required: false
+    - label: Left alt text
+      name: alt1
+      widget: string
+      required: false
+    - label: Left caption
+      name: caption1
+      widget: string
+      required: false
+    - label: Right photo
+      name: image2
+      widget: image
+      required: false
+    - label: Right alt text
+      name: alt2
+      widget: string
+      required: false
+    - label: Right caption
+      name: caption2
+      widget: string
+      required: false
+  - label: Scores
+    name: scores
+    widget: list
+    required: false
+    collapsed: true
+    summary: '{{fields.category}} — {{fields.score}}/10'
+    fields:
+    - label: Category
+      name: category
+      widget: string
+    - label: Score
+      name: score
+      widget: number
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Comment
+      name: comment
+      widget: text
+  - label: Overall comment
+    name: overall
+    widget: text
+    required: false
+  - label: Would I go back?
+    name: wouldGoBack
+    widget: string
+    required: false

@@ -5,25 +5,31 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function collectJsonFiles(dirName) {
+  const dir = path.join(__dirname, dirName);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(file => file.endsWith('.json'))
+    .map(file => path.join(dir, file));
+}
+
 function collectReviewFiles() {
   const rootFiles = fs.readdirSync(__dirname)
     .filter(file => file.endsWith('.article'))
     .map(file => path.join(__dirname, file));
 
-  const reviewsDir = path.join(__dirname, 'reviews');
-  let newFiles = [];
-  if (fs.existsSync(reviewsDir)) {
-    newFiles = fs.readdirSync(reviewsDir)
-      .filter(file => file.endsWith('.json'))
-      .map(file => path.join(reviewsDir, file));
-  }
-  return [...rootFiles, ...newFiles];
+  return [
+    ...rootFiles,
+    ...collectJsonFiles('reviews'),
+    ...collectJsonFiles('safari')
+  ];
 }
 
 const site = readJson(path.join(__dirname, 'homepage.page'));
 const sections = {
   stay: readJson(path.join(__dirname, 'stay.page')),
   eat: readJson(path.join(__dirname, 'eat.page')),
+  safari: readJson(path.join(__dirname, 'safari.page')),
   cruise: readJson(path.join(__dirname, 'cruise.page')),
   about: readJson(path.join(__dirname, 'about.page'))
 };

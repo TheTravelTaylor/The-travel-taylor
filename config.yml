@@ -71,6 +71,19 @@ collections:
     - label: Intro
       name: intro
       widget: text
+  - name: safari_page
+    label: SAFARI landing page
+    file: safari.page
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: string
+    - label: Intro
+      name: intro
+      widget: text
   - name: cruise_page
     label: CRUISE landing page
     file: cruise.page
@@ -99,6 +112,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -232,6 +246,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -370,6 +385,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -503,6 +519,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -636,6 +653,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -769,6 +787,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -902,6 +921,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -1025,6 +1045,143 @@ collections:
       name: wouldGoBack
       widget: string
       required: false
+- name: safari
+  label: SAFARI
+  label_singular: Safari review
+  folder: safari
+  extension: json
+  format: json
+  create: true
+  slug: '{{fields.slug}}'
+  editor:
+    preview: false
+  fields:
+  - label: Section
+    name: section
+    widget: hidden
+    default: safari
+  - label: Display order
+    name: order
+    widget: number
+    value_type: int
+    required: false
+  - label: Title
+    name: title
+    widget: string
+  - label: Slug
+    name: slug
+    widget: string
+    hint: Lowercase words separated by hyphens.
+  - label: Location
+    name: location
+    widget: string
+  - label: Summary
+    name: summary
+    widget: text
+  - label: Overall score
+    name: score
+    widget: number
+    required: false
+    value_type: float
+    min: 0
+    max: 10
+    step: 0.5
+  - label: Score label
+    name: scoreLabel
+    widget: string
+    required: false
+  - label: Hero image
+    name: hero
+    widget: image
+    required: false
+    hint: Used on the article card and at the top of the review.
+  - label: Article
+    name: body
+    widget: list
+    required: false
+    collapsed: true
+    summary: '{{fields.type}}'
+    fields:
+    - label: Block type
+      name: type
+      widget: select
+      options:
+      - label: Paragraph
+        value: paragraph
+      - label: Heading
+        value: heading
+      - label: Full-width photo
+        value: image
+      - label: Two-photo layout
+        value: image_pair
+    - label: Text / heading
+      name: text
+      widget: text
+      required: false
+    - label: Photo
+      name: image
+      widget: image
+      required: false
+    - label: Alt text
+      name: alt
+      widget: string
+      required: false
+    - label: Caption
+      name: caption
+      widget: string
+      required: false
+    - label: Left photo
+      name: image1
+      widget: image
+      required: false
+    - label: Left alt text
+      name: alt1
+      widget: string
+      required: false
+    - label: Left caption
+      name: caption1
+      widget: string
+      required: false
+    - label: Right photo
+      name: image2
+      widget: image
+      required: false
+    - label: Right alt text
+      name: alt2
+      widget: string
+      required: false
+    - label: Right caption
+      name: caption2
+      widget: string
+      required: false
+  - label: Scores
+    name: scores
+    widget: list
+    required: false
+    collapsed: true
+    summary: '{{fields.category}} — {{fields.score}}/10'
+    fields:
+    - label: Category
+      name: category
+      widget: string
+    - label: Score
+      name: score
+      widget: number
+      value_type: float
+      min: 0
+      max: 10
+      step: 0.5
+    - label: Comment
+      name: comment
+      widget: text
+  - label: Overall comment
+    name: overall
+    widget: text
+    required: false
+  - label: Would I go back?
+    name: wouldGoBack
+    widget: string
+    required: false
 - name: cruise
   label: CRUISE
   format: json
@@ -1040,6 +1197,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -1173,6 +1331,7 @@ collections:
       options:
       - stay
       - eat
+      - safari
       - cruise
     - label: Display order
       name: order
@@ -1313,6 +1472,7 @@ collections:
     options:
     - stay
     - eat
+    - safari
     - cruise
   - label: Display order
     name: order

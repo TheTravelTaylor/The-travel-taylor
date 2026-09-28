@@ -1,13 +1,104 @@
 {
-  "order": 20,
+  "scores": [
+    {
+      "category": "FOOD",
+      "score": 9.5,
+      "comment": "Twelve assured courses: precise, thoughtful and quietly impressive."
+    },
+    {
+      "category": "SETTING & VIEWS",
+      "score": 9,
+      "comment": "Rooftop Istanbul views give dinner a suitably special backdrop."
+    },
+    {
+      "category": "SERVICE ",
+      "score": 9.5,
+      "comment": "Polished, knowledgeable and warm without becoming formal."
+    },
+    {
+      "category": "WINE",
+      "score": 9,
+      "comment": "A considered selection that matched the food without stealing the show."
+    },
+    {
+      "category": "VALUE ",
+      "score": 9,
+      "comment": "A substantial tasting experience that delivered at this level of dining."
+    },
+    {
+      "category": "ATMOSPHERE & EXPERIENCE ",
+      "score": 9.5,
+      "comment": "Soft piano, rooftop views and a restaurant confident enough not to shout."
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "text": "The Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tucked inside a restored 1901 building once home to Franciscan nursing sisters (yes, really), Nicole sits quietly above Istanbul’s rooftops — all brushed concrete, muted lighting, and a very deliberate calm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inside it’s white tablecloths, polished service, the gentle clink of cutlery and soft piano music playing in the background. Every table’s been deliberately placed — no duff spots, no awkward corners — nobody has to argue about the best seat. Just quiet elegance and a clear focus: the view. Hard to beat. Rooftop skyline, soft skies, and the kind of light that flatters everyone."
+    },
+    {
+      "image": "/uploads/nicole2.png",
+      "type": "image"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tables spaced wide enough that you won’t hear anyone’s anniversary toast, and the city laid out like it’s trying to impress you."
+    },
+    {
+      "type": "heading",
+      "text": "The Bread course (really does deserve Its Own heading)"
+    },
+    {
+      "type": "image",
+      "image": "/uploads/nicole3.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you’re the kind of person who gets a bit too excited about bread, this was a strong start.\n\nA warm, seeded roll with serious crunch.\n\nA glossy, slightly sweet slice of something cake-adjacent.\n\nAnd then, quietly placed down like it wasn’t a big deal: a fried cheese bite sat in a shallow pool of olive oil, crisp on the outside, molten inside, and frankly the kind of thing I’d eat twelve of if they let me."
+    },
+    {
+      "type": "heading",
+      "text": "The Menu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Twelve smart courses that quietly show off.\n\nTurkish at the core, but dressed for dinner — nothing felt gimmicky, and every dish tasted as considered as it looked. Some favourites:\n\nUyukuluk Krem Karamel & Çerkez Öreği – sweetbread cream caramel and a tiny Circassian duck bite. I wasn’t exactly excited about the sweetbread — it’s not something I’d usually go near — but it was rich, silky, and surprisingly subtle.\n\nPastramili Yumurta – fish pastrami and anise-scented Ezine cheese. Slightly breakfast-adjacent but in a very elegant, not-wearing-pyjamas way.\n\nDolma – layered with bulgur and smoked yoghurt, nothing like the usual version. Clean, clever, and quietly brilliant.\n\nCatch of the Day – curled into a rosette and swimming in a sharp brown butter and artichoke sauce. Possibly the best one on the menu.\n\nChicken Kazandibi – crisp skin, soft centre, wild mushroom sauce. Simple flavours, done well.\n\nLamb Shoulder – with fermented pepper purée and jus. Rich, balanced, and paired with a deep, earthy morel mushroom that held its own.\n\nKünefe – a light take on the classic, with pistachio purée and cheese. Just sweet enough. Nothing syrupy, no sugar crash."
+    },
+    {
+      "type": "image_pair",
+      "image1": "/uploads/nicole4.png",
+      "image2": "/uploads/nicole5.png"
+    },
+    {
+      "type": "heading",
+      "text": "The Wine"
+    },
+    {
+      "type": "paragraph",
+      "text": "We went for the pairing. Obviously.\n\nMostly Turkish bottles — and honestly, Turkey’s not somewhere you expect standout wine from, but we were genuinely impressed. Clean whites, interesting reds, nothing clunky or overly sweet. Thoughtful choices that matched the food without competing with it. And no one tried to give us a lecture about tannins, which always helps."
+    },
+    {
+      "type": "image",
+      "image": "/uploads/nicole6.png"
+    }
+  ],
+  "scoreLabel": "THE TAYLOR SCALE",
+  "wouldGoBack": "Absolutely. Smart cooking, relaxed service and a setting worth seeing again.",
   "section": "eat",
+  "summary": "Twelve quietly impressive courses above Istanbul’s rooftops, delivered with polish and no need to shout.",
   "slug": "nicole-istanbul",
+  "overall": "An accomplished tasting menu with polish, personality and one of Istanbul’s better dining-room views.",
+  "order": 20,
+  "score": 9.5,
   "location": "TÜRKİYE · ISTANBUL",
   "title": "Nicole: Smart Plates, Soft Piano, No Fuss",
-  "summary": "Twelve quietly impressive courses above Istanbul’s rooftops, delivered with polish and no need to shout.",
-  "score": null,
-  "scoreLabel": "THE TAYLOR SCALE",
-  "hero": "",
-  "body": [],
-  "scores": []
+  "hero": "/uploads/nicole1.png"
 }

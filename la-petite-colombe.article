@@ -10,6 +10,22 @@
   "hero": "",
   "body": [
     {
+      "type": "paragraph",
+      "text": "There are restaurants where you remember a particular dish, and then there are restaurants where the whole experience becomes the memory. La Petite Colombe was definitely the latter."
+    },
+    {
+      "type": "heading",
+      "text": "Getting there"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our pre-booked taxi failed to turn up, although secretly we were quite pleased — we'd wanted an excuse to use one of Franschhoek's tuk tuks anyway."
+    },
+    {
+      "type": "paragraph",
+      "text": "A bright blue tuk tuk took us as far as the gates of Leeu Estates. Tuk tuks aren't allowed on the estate roads, so from there we transferred to a golf buggy for the final stretch to La Petite Colombe. Not quite the arrival we'd planned, but it definitely added to the fun."
+    },
+    {
       "type": "heading",
       "text": "A table for two. A restaurant for two."
     },
@@ -54,8 +70,12 @@
       "text": "Bread came with a spread of accompaniments, while flowing white ceramics made even the tableware part of the fun. The meal moved from those intricate little bites into more substantial seafood and meat courses, with beautifully composed plates and plenty going on without losing its sense of purpose."
     },
     {
+      "type": "heading",
+      "text": "Playful rather than pretentious"
+    },
+    {
       "type": "paragraph",
-      "text": "I’ve eaten in restaurants where, somewhere around course eight, you realise you’ve stopped enjoying yourself. Another technically perfect plate arrives, somebody explains fourteen ingredients and something else has inevitably been fermented for six months. Eventually, you just want chips. La Petite Colombe never reached that point."
+      "text": "I've eaten in restaurants where, somewhere around course eight, you realise you've stopped enjoying yourself. Another technically perfect plate arrives, somebody explains fourteen ingredients and something else has inevitably been fermented for six months. Eventually, you just want chips. La Petite Colombe never reached that point. The theatre complemented the cooking rather than compensating for it."
     },
     {
       "type": "heading",
@@ -151,5 +171,5 @@
     }
   ],
   "overall": "A lunch I enjoyed every bit as much as I admired.",
-  "wouldGoBack": "Absolutely."
+  "wouldGoBack": "Absolutely. Next time I'd happily skip booking the taxi altogether. Give me the tuk tuk, golf buggy, another bottle of Chardonnay and a cold Franschhoek evening with that fire roaring."
 }

@@ -166,6 +166,11 @@
       "text": "He suggested a lovely Chardonnay, and we were very happy with that decision. It worked well across the meal, and I enjoyed settling into one good bottle rather than continually moving between small pairing pours. Credit to him for listening to what we wanted and finding something that suited us, rather than nudging us towards the more expensive option."
     },
     {
+      "type": "image",
+      "image": "/uploads/table.jpg",
+      "alt": "Table"
+    },
+    {
       "type": "heading",
       "text": "Service without the ceremony"
     },
@@ -182,16 +187,27 @@
       "text": "A little Wonka at the end"
     },
     {
-      "type": "heading",
-      "text": "Beyond the table"
-    },
-    {
       "type": "paragraph",
       "text": "The desserts kept the playfulness going: sculptural bowls, bright colours and tiny finishing touches, followed by petits fours that took the miniature-garden idea to its logical, chocolate-filled conclusion."
     },
     {
+      "type": "image_pair",
+      "alt": "tin + desert",
+      "image1": "/uploads/tin.jpg",
+      "image2": "/uploads/dessert.jpg"
+    },
+    {
       "type": "paragraph",
       "text": "Greenery, colourful sweets and tiny Tonka Bar elements put the final presentation somewhere between fine dining, a miniature garden and Willy Wonka. A very agreeable place to end up. By then, any suspicion that this might be an afternoon of solemn appreciation had thoroughly disappeared."
+    },
+    {
+      "type": "image",
+      "alt": "tonka",
+      "image": "/uploads/tonka.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Beyond the table"
     },
     {
       "type": "paragraph",
@@ -202,8 +218,14 @@
       "text": "I loved that combination of art, planting and landscape. It gives the visit room to extend beyond the dining room without taking anything away from the restaurant. The meal is the reason to come; the grounds are a very good reason not to hurry away."
     },
     {
+      "type": "image_pair",
+      "alt": "sculpture + vinyard",
+      "image1": "/uploads/sculpture.jpg",
+      "image2": "/uploads/vineyards.jpg"
+    },
+    {
       "type": "heading",
-      "text": "Impressive, yes. But also fun."
+      "text": "The Trabel Taylor Verdict........Impressive, yes. But also fun."
     },
     {
       "type": "paragraph",

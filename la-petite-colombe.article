@@ -1,13 +1,36 @@
 {
-  "order": 10,
-  "section": "eat",
-  "slug": "la-petite-colombe",
-  "location": "FRANSCHHOEK, SOUTH AFRICA",
-  "title": "La Petite Colombe",
-  "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
-  "score": 9.5,
-  "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
-  "hero": "",
+  "scores": [
+    {
+      "category": "FOOD",
+      "score": 9,
+      "comment": "Ambitious cooking with plenty of playfulness."
+    },
+    {
+      "category": "SETTING & VIEWS",
+      "score": 10,
+      "comment": "Mountains, vineyards and clouds that never sat still."
+    },
+    {
+      "category": "SERVICE",
+      "score": 9.5,
+      "comment": "Personal, polished and never hovering."
+    },
+    {
+      "category": "WINE",
+      "score": 8.5,
+      "comment": "Lovely Chardonnay; the pairing felt overpriced."
+    },
+    {
+      "category": "VALUE",
+      "score": 9,
+      "comment": "The food menu delivered very good value."
+    },
+    {
+      "category": "ATMOSPHERE & EXPERIENCE",
+      "score": 10,
+      "comment": "An entire restaurant to ourselves. Rather special."
+    }
+  ],
   "body": [
     {
       "type": "paragraph",
@@ -138,38 +161,15 @@
       "text": "The unexpected arrival set the mood, the window table and rolling clouds did their bit, and the cooking and service made it worth staying put. Having the restaurant to ourselves was a rare bonus. But the thing I’d come back for is that combination of serious food and a thoroughly good time. Preferably with the fire lit."
     }
   ],
-  "scores": [
-    {
-      "category": "FOOD",
-      "score": 9,
-      "comment": "Ambitious cooking with plenty of playfulness."
-    },
-    {
-      "category": "SETTING & VIEWS",
-      "score": 10,
-      "comment": "Mountains, vineyards and clouds that never sat still."
-    },
-    {
-      "category": "SERVICE",
-      "score": 9.5,
-      "comment": "Personal, polished and never hovering."
-    },
-    {
-      "category": "WINE",
-      "score": 8.5,
-      "comment": "Lovely Chardonnay; the pairing felt overpriced."
-    },
-    {
-      "category": "VALUE",
-      "score": 9,
-      "comment": "The food menu delivered very good value."
-    },
-    {
-      "category": "ATMOSPHERE & EXPERIENCE",
-      "score": 10,
-      "comment": "An entire restaurant to ourselves. Rather special."
-    }
-  ],
+  "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
+  "wouldGoBack": "Absolutely. Next time I'd happily skip booking the taxi altogether. Give me the tuk tuk, golf buggy, another bottle of Chardonnay and a cold Franschhoek evening with that fire roaring.",
+  "section": "eat",
+  "summary": "Tuk tuks, tasting menus, rolling clouds and a restaurant entirely to ourselves.",
+  "slug": "la-petite-colombe",
   "overall": "A lunch I enjoyed every bit as much as I admired.",
-  "wouldGoBack": "Absolutely. Next time I'd happily skip booking the taxi altogether. Give me the tuk tuk, golf buggy, another bottle of Chardonnay and a cold Franschhoek evening with that fire roaring."
+  "order": 10,
+  "score": 9.5,
+  "location": "FRANSCHHOEK, SOUTH AFRICA",
+  "title": "La Petite Colombe",
+  "hero": "/uploads/room.jpg"
 }

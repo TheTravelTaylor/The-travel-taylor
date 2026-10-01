@@ -17,6 +17,7 @@
     {"type":"heading","text":"The Suite"},
     {"type":"paragraph","text":"The suite was huge and properly luxurious. There was a large bedroom, generous bathroom, private deck and plunge pool, with views straight out into the reserve. It had the sort of scale that makes unpacking feel worthwhile even when you are only staying four nights."},
     {"type":"paragraph","text":"What I liked was that it still felt like a safari lodge. Natural materials, warm textures and plenty of timber stopped the space becoming anonymous hotel luxury. The only frustration was that I was usually too tired to enjoy it for as long as I wanted."},
+    {"type":"image","image":"/uploads/madikwe-suite.jpg","alt":"Our suite at Madikwe Hills"},
     {"type":"heading","text":"The Design"},
     {"type":"paragraph","text":"The interiors were one of the things I liked most about Madikwe Hills. The lodge is full of timber, stone, woven lighting, leather, tactile fabrics and the occasional enormous boulder that appears to have been incorporated into the architecture rather than moved out of its way."},
     {"type":"paragraph","text":"It feels designed rather than decorated. Nothing is trying too hard to shout luxury, yet everything feels considered: the lighting, the furniture, the bar, the way the rooms open to the landscape. The money is visible in the whole experience rather than a few obviously expensive finishes."},
@@ -60,5 +61,5 @@
   "score":9.5,
   "location":"MADIKWE GAME RESERVE, SOUTH AFRICA",
   "title":"Madikwe Hills — The Lodge That Set the Bar Rather High",
-  "hero":""
+  "hero":"/uploads/madikwe-hero.jpg"
 }

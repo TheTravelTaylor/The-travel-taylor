@@ -5,6 +5,33 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function buildImagesFromBase64() {
+  const dataDir = path.join(__dirname, 'image-data');
+  const uploadsDir = path.join(__dirname, 'uploads');
+  if (!fs.existsSync(dataDir)) return;
+
+  fs.mkdirSync(uploadsDir, { recursive: true });
+  const files = fs.readdirSync(dataDir).filter(file => file.endsWith('.txt'));
+  const groups = new Map();
+
+  for (const file of files) {
+    const match = file.match(/^(.*\.(?:jpg|jpeg|png))\.part(\d+)\.txt$/i);
+    if (!match) continue;
+    const [, outName, part] = match;
+    if (!groups.has(outName)) groups.set(outName, []);
+    groups.get(outName).push({ part: Number(part), file });
+  }
+
+  for (const [outName, parts] of groups) {
+    parts.sort((a, b) => a.part - b.part);
+    const b64 = parts
+      .map(p => fs.readFileSync(path.join(dataDir, p.file), 'utf8').trim())
+      .join('');
+    fs.writeFileSync(path.join(uploadsDir, outName), Buffer.from(b64, 'base64'));
+    console.log(`Built image ${outName} from ${parts.length} chunks.`);
+  }
+}
+
 function collectJsonFiles(dirName) {
   const dir = path.join(__dirname, dirName);
   if (!fs.existsSync(dir)) return [];
@@ -24,6 +51,8 @@ function collectReviewFiles() {
     ...collectJsonFiles('safari')
   ];
 }
+
+buildImagesFromBase64();
 
 const site = readJson(path.join(__dirname, 'homepage.page'));
 const sections = {

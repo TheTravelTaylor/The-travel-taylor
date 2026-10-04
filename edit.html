@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <title>The Travel Taylor — Mobile Editor</title>
+  <style>
+    html, body { margin: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
+    @media (max-width: 820px) {
+      input, textarea, select, button { font-size: 16px !important; }
+      textarea { min-height: 96px !important; }
+    }
+    #editor-error {
+      display: none;
+      box-sizing: border-box;
+      margin: 24px;
+      padding: 18px;
+      border: 1px solid #c9c9c9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+  </style>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+  <div id="editor-error"></div>
+  <script>
+    (async function () {
+      function articleTypes() {
+        return [
+          {
+            label: 'Paragraph',
+            name: 'paragraph',
+            widget: 'object',
+            summary: "{{fields.text | truncate(100, '…')}}",
+            fields: [
+              { label: 'Paragraph text', name: 'text', widget: 'text' }
+            ]
+          },
+          {
+            label: 'Heading',
+            name: 'heading',
+            widget: 'object',
+            summary: "HEADING — {{fields.text | truncate(70, '…')}}",
+            fields: [
+              { label: 'Heading', name: 'text', widget: 'string' }
+            ]
+          },
+          {
+            label: 'Full-width photo',
+            name: 'image',
+            widget: 'object',
+            summary: "PHOTO — {{fields.alt | default('Tap to edit photo')}}",
+            fields: [
+              { label: 'Photo', name: 'image', widget: 'image' },
+              { label: 'Alt text', name: 'alt', widget: 'string', required: false },
+              { label: 'Caption', name: 'caption', widget: 'string', required: false }
+            ]
+          },
+          {
+            label: 'Two-photo layout',
+            name: 'image_pair',
+            widget: 'object',
+            summary: 'TWO-PHOTO LAYOUT',
+            fields: [
+              { label: 'Left photo', name: 'image1', widget: 'image' },
+              { label: 'Left alt text', name: 'alt1', widget: 'string', required: false },
+              { label: 'Left caption', name: 'caption1', widget: 'string', required: false },
+              { label: 'Right photo', name: 'image2', widget: 'image' },
+              { label: 'Right alt text', name: 'alt2', widget: 'string', required: false },
+              { label: 'Right caption', name: 'caption2', widget: 'string', required: false }
+            ]
+          }
+        ];
+      }
+
+      function improveArticleFields(fields) {
+        if (!Array.isArray(fields)) return;
+
+        const body = fields.find(field => field && field.name === 'body' && field.widget === 'list');
+        if (!body) return;
+
+        body.label = 'Article';
+        body.label_singular = 'Add section';
+        body.hint = 'Each line shows the section content so it is easy to find on a phone. Tap a line to edit it; use the handle to reorder it.';
+        body.collapsed = true;
+        body.minimize_collapsed = false;
+        body.typeKey = 'type';
+        body.types = articleTypes();
+        delete body.fields;
+        delete body.field;
+        delete body.summary;
+
+        const scores = fields.find(field => field && field.name === 'scores' && field.widget === 'list');
+        if (scores) {
+          scores.label = 'The Travel Taylor scores';
+          scores.label_singular = 'Add score';
+          scores.collapsed = true;
+          scores.summary = "{{fields.category | default('Score')}} — {{fields.score}}/10";
+          scores.hint = 'Tap a score to edit it. Drag the handle to change the order.';
+        }
+
+        const relabel = {
+          score: 'Overall score',
+          scoreLabel: 'Card score label (advanced)',
+          slug: 'Web address / slug (advanced)',
+          order: 'Display order (advanced)',
+          hero: 'Main / hero image',
+          overall: 'Overall verdict',
+          wouldGoBack: 'Would I go back?'
+        };
+        fields.forEach(field => {
+          if (field && relabel[field.name]) field.label = relabel[field.name];
+          if (field && field.name === 'slug') field.hint = 'Only change this if you deliberately want to change the article web address.';
+          if (field && field.name === 'order') field.hint = 'Controls where the review appears within its collection.';
+        });
+
+        const primaryOrder = ['title', 'location', 'summary', 'hero', 'score', 'body', 'scores', 'overall', 'wouldGoBack'];
+        const advancedOrder = ['scoreLabel', 'slug', 'order', 'section'];
+        const primarySet = new Set(primaryOrder);
+        const advancedSet = new Set(advancedOrder);
+        const byName = new Map(fields.filter(Boolean).map(field => [field.name, field]));
+        const primary = primaryOrder.map(name => byName.get(name)).filter(Boolean);
+        const other = fields.filter(field => field && !primarySet.has(field.name) && !advancedSet.has(field.name));
+        const advanced = advancedOrder.map(name => byName.get(name)).filter(Boolean);
+        fields.splice(0, fields.length, ...primary, ...other, ...advanced);
+      }
+
+      function improveConfig(config) {
+        (config.collections || []).forEach(collection => {
+          improveArticleFields(collection.fields);
+          (collection.files || []).forEach(file => improveArticleFields(file.fields));
+        });
+        config.load_config_file = false;
+        return config;
+      }
+
+      try {
+        const response = await fetch('/config.yml', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Could not load the editor configuration.');
+        const yamlText = await response.text();
+        const config = improveConfig(window.jsyaml.load(yamlText));
+        if (!window.initCMS) throw new Error('The editor did not load correctly.');
+        window.initCMS({ config: config });
+      } catch (error) {
+        const box = document.getElementById('editor-error');
+        box.style.display = 'block';
+        box.innerHTML = '<strong>The editor could not start.</strong><br><br>' + String(error.message || error) + '<br><br>Your original editor at <code>/admin.html</code> has not been changed.';
+      }
+    })();
+  </script>
+</body>
+</html>

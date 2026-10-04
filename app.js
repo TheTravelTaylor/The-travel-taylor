@@ -45,10 +45,23 @@ function figure(src,alt='',caption='',cls=''){
     ${caption?`<figcaption>${esc(caption)}</figcaption>`:''}
   </figure>`;
 }
+function renderAttachedPhotos(b){
+  const first=b.photoAfter || '';
+  const second=b.photoAfter2 || '';
+  if(first && second){
+    return `<div class="article-photo-pair">
+      ${figure(first,b.photoAfterAlt,b.photoAfterCaption,'')}
+      ${figure(second,b.photoAfterAlt2,b.photoAfterCaption2,'')}
+    </div>`;
+  }
+  if(first) return figure(first,b.photoAfterAlt,b.photoAfterCaption,'article-photo-full');
+  if(second) return figure(second,b.photoAfterAlt2,b.photoAfterCaption2,'article-photo-full');
+  return '';
+}
 function renderBodyBlock(b){
   if(!b) return '';
-  if(b.type==='heading') return `<h2>${esc(b.text)}</h2>`;
-  if(b.type==='paragraph') return `<p>${esc(b.text)}</p>`;
+  if(b.type==='heading') return `<h2>${esc(b.text)}</h2>${renderAttachedPhotos(b)}`;
+  if(b.type==='paragraph') return `<p>${esc(b.text)}</p>${renderAttachedPhotos(b)}`;
   if(b.type==='image') return figure(b.image,b.alt,b.caption,'article-photo-full');
   if(b.type==='image_pair'){
     return `<div class="article-photo-pair">
@@ -56,7 +69,7 @@ function renderBodyBlock(b){
       ${figure(b.image2,b.alt2,b.caption2,'')}
     </div>`;
   }
-  return b.text?`<p>${esc(b.text)}</p>`:'';
+  return b.text?`<p>${esc(b.text)}</p>${renderAttachedPhotos(b)}`:'';
 }
 function renderArticle(d,slug){
   const a=d.articles.find(x=>x.slug===slug);

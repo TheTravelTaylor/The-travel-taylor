@@ -32,6 +32,29 @@
   <div id="editor-error"></div>
   <script>
     (async function () {
+      function photoAfterFields() {
+        return [
+          {
+            label: 'Photo immediately after this section (optional)',
+            name: 'photoAfter',
+            widget: 'image',
+            required: false,
+            hint: 'Choose a photo here and it will appear immediately after this paragraph or heading. No dragging required.'
+          },
+          { label: 'Photo alt text', name: 'photoAfterAlt', widget: 'string', required: false },
+          { label: 'Photo caption', name: 'photoAfterCaption', widget: 'string', required: false },
+          {
+            label: 'Second photo alongside it (optional)',
+            name: 'photoAfter2',
+            widget: 'image',
+            required: false,
+            hint: 'Add a second photo here if you want the two images displayed side by side.'
+          },
+          { label: 'Second photo alt text', name: 'photoAfterAlt2', widget: 'string', required: false },
+          { label: 'Second photo caption', name: 'photoAfterCaption2', widget: 'string', required: false }
+        ];
+      }
+
       function articleTypes() {
         return [
           {
@@ -40,7 +63,8 @@
             widget: 'object',
             summary: "{{fields.text | truncate(100, '…')}}",
             fields: [
-              { label: 'Paragraph text', name: 'text', widget: 'text' }
+              { label: 'Paragraph text', name: 'text', widget: 'text' },
+              ...photoAfterFields()
             ]
           },
           {
@@ -49,7 +73,8 @@
             widget: 'object',
             summary: "HEADING — {{fields.text | truncate(70, '…')}}",
             fields: [
-              { label: 'Heading', name: 'text', widget: 'string' }
+              { label: 'Heading', name: 'text', widget: 'string' },
+              ...photoAfterFields()
             ]
           },
           {
@@ -88,7 +113,7 @@
 
         body.label = 'Article';
         body.label_singular = 'Add section';
-        body.hint = 'Each line shows the section content so it is easy to find on a phone. Tap a line to edit it; use the handle to reorder it.';
+        body.hint = 'To add a photo in a specific place, open the paragraph or heading it should follow and use “Photo immediately after this section”. You only need separate photo blocks for older content or unusual layouts.';
         body.collapsed = true;
         body.minimize_collapsed = false;
         body.typeKey = 'type';

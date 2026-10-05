@@ -19,12 +19,15 @@ function card(a){
 }
 function renderHome(d){
   const featured=d.articles.slice(0,4).map(card).join('');
-  return `<section class="home-hero">
+  const heroImage=d.site.homeHero||'/home-hero.jpg';
+  const ctaText=d.site.homeCtaText||'READ THE SOUTH AFRICA EDIT';
+  const ctaLink=d.site.homeCtaLink||'?view=eat';
+  return `<section class="home-hero" style="background-image:linear-gradient(180deg,rgba(0,0,0,.16) 0%,rgba(0,0,0,.18) 32%,rgba(0,0,0,.62) 100%),url('${esc(heroImage)}')">
     <div class="home-hero-inner">
       <div class="home-kicker">${esc(d.site.homeKicker)}</div>
       <h1>${esc(d.site.homeHeadline)}</h1>
       <p>${esc(d.site.homeIntro)}</p>
-      <a class="home-cta" href="?view=eat">READ THE SOUTH AFRICA EDIT ↗</a>
+      <a class="home-cta" href="${esc(ctaLink)}">${esc(ctaText)} ↗</a>
     </div>
   </section>
   <section class="list home-featured">${featured}</section>`;

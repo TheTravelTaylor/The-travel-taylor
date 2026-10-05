@@ -46,16 +46,20 @@ function figure(src,alt='',caption='',cls=''){
   </figure>`;
 }
 function renderAttachedPhotos(b){
-  const first=b.photoAfter || '';
-  const second=b.photoAfter2 || '';
+  const first=b.photoAfter || b.image || '';
+  const second=b.photoAfter2 || b.image2 || '';
+  const firstAlt=b.photoAfterAlt || b.alt || '';
+  const firstCaption=b.photoAfterCaption || b.caption || '';
+  const secondAlt=b.photoAfterAlt2 || b.alt2 || '';
+  const secondCaption=b.photoAfterCaption2 || b.caption2 || '';
   if(first && second){
     return `<div class="article-photo-pair">
-      ${figure(first,b.photoAfterAlt,b.photoAfterCaption,'')}
-      ${figure(second,b.photoAfterAlt2,b.photoAfterCaption2,'')}
+      ${figure(first,firstAlt,firstCaption,'')}
+      ${figure(second,secondAlt,secondCaption,'')}
     </div>`;
   }
-  if(first) return figure(first,b.photoAfterAlt,b.photoAfterCaption,'article-photo-full');
-  if(second) return figure(second,b.photoAfterAlt2,b.photoAfterCaption2,'article-photo-full');
+  if(first) return figure(first,firstAlt,firstCaption,'article-photo-full');
+  if(second) return figure(second,secondAlt,secondCaption,'article-photo-full');
   return '';
 }
 function renderBodyBlock(b){

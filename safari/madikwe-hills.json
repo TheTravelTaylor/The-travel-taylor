@@ -1,66 +1,243 @@
 {
   "scores": [
-    {"category":"LODGE & SETTING","score":9.5,"comment":"Beautifully placed, luxurious and completely connected to the bush."},
-    {"category":"SUITE","score":10,"comment":"Huge, private and luxuriously comfortable."},
-    {"category":"INTERIOR DESIGN","score":9.5,"comment":"Warm, tactile and designed rather than simply decorated."},
-    {"category":"GAME VIEWING","score":9.5,"comment":"Wild dogs, cheetah, lions, elephants and plenty in between."},
-    {"category":"GUIDE & TRACKER","score":10,"comment":"Brian and Charlie were exceptional."},
-    {"category":"FOOD & DRINK","score":9,"comment":"Generous, relaxed and very well lubricated."},
-    {"category":"SERVICE","score":9.5,"comment":"Personal, warm and consistently thoughtful."},
-    {"category":"VALUE","score":8.5,"comment":"Expensive, certainly, but the level of inclusion is substantial."}
+    {
+      "category": "LODGE & SETTING",
+      "score": 9.5,
+      "comment": "Beautifully placed, luxurious and completely connected to the bush."
+    },
+    {
+      "category": "SUITE",
+      "score": 10,
+      "comment": "Huge, private and luxuriously comfortable."
+    },
+    {
+      "category": "INTERIOR DESIGN",
+      "score": 9.5,
+      "comment": "Warm, tactile and designed rather than simply decorated."
+    },
+    {
+      "category": "GAME VIEWING",
+      "score": 9.5,
+      "comment": "Wild dogs, cheetah, lions, elephants and plenty in between."
+    },
+    {
+      "category": "GUIDE & TRACKER",
+      "score": 10,
+      "comment": "Brian and Charlie were exceptional."
+    },
+    {
+      "category": "FOOD & DRINK",
+      "score": 9,
+      "comment": "Generous, relaxed and very well lubricated."
+    },
+    {
+      "category": "SERVICE",
+      "score": 9.5,
+      "comment": "Personal, warm and consistently thoughtful."
+    },
+    {
+      "category": "VALUE",
+      "score": 8.5,
+      "comment": "Expensive, certainly, but the level of inclusion is substantial."
+    }
   ],
   "body": [
-    {"type":"paragraph","text":"We arrived at Madikwe Hills after around nineteen hours of travelling, somewhere between exhausted, drunk and already hungover. There had been champagne. There had been an airport lounge. There had been more champagne. By the time we reached the lodge there was just enough time to look at the suite, attempt to remember where we had put everything and head straight out on our first game drive. It turned out to be exactly the right way to start."},
-    {"type":"heading","text":"The Daily Rhythm"},
-    {"type":"paragraph","text":"Madikwe Hills runs to a very clear timetable. Wake-up at 5.30am, tea or coffee, morning game drive, breakfast, several hours of doing very little, lunch, high tea, afternoon game drive, drinks, dinner, bed. Repeat."},
-    {"type":"paragraph","text":"At home I would regard 5.30am as a personal attack. On safari it became completely normal. You do not want to miss the game drives. That is why you are there. The trick is accepting the rhythm rather than attempting to impose your usual one on it. We did, very quickly. It worked."},
-    {"type":"heading","text":"The Suite"},
-    {"type":"paragraph","text":"The suite was huge and properly luxurious. There was a large bedroom, generous bathroom, private deck and plunge pool, with views straight out into the reserve. It had the sort of scale that makes unpacking feel worthwhile even when you are only staying four nights."},
-    {"type":"paragraph","text":"What I liked was that it still felt like a safari lodge. Natural materials, warm textures and plenty of timber stopped the space becoming anonymous hotel luxury. The only frustration was that I was usually too tired to enjoy it for as long as I wanted."},
-    {"type":"image","image":"/uploads/madikwe-suite.jpg","alt":"Our suite at Madikwe Hills"},
-    {"type":"heading","text":"The Design"},
-    {"type":"paragraph","text":"The interiors were one of the things I liked most about Madikwe Hills. The lodge is full of timber, stone, woven lighting, leather, tactile fabrics and the occasional enormous boulder that appears to have been incorporated into the architecture rather than moved out of its way."},
-    {"type":"paragraph","text":"It feels designed rather than decorated. Nothing is trying too hard to shout luxury, yet everything feels considered: the lighting, the furniture, the bar, the way the rooms open to the landscape. The money is visible in the whole experience rather than a few obviously expensive finishes."},
-    {"type":"heading","text":"The Bar"},
-    {"type":"paragraph","text":"One of the less obvious luxury touches was how well stocked the suite bar was. It was replenished multiple times during the day with decent wines and even MCC, and all drinks were included. This was not one of those minibars where three beers and a lonely miniature are supposed to represent generosity."},
-    {"type":"paragraph","text":"We settled into a routine remarkably quickly: a couple of post-game-drive mimosas with breakfast, decent Chardonnay at lunch, one back at the suite, a 45-minute disco nap, afternoon game drive, gin and tonic in the bush, a welcome-home shot of brandy, port or something similar, quick change, pre-dinner cocktail and more Chardonnay with dinner. It was all very civilised. Potentially too civilised."},
-    {"type":"heading","text":"Brian & Charlie"},
-    {"type":"paragraph","text":"Our guide Brian and tracker Charlie were a huge part of why the stay was so good. They were brilliant at finding animals, obviously, but it was their genuine enthusiasm, knowledge and sense of humour that made the drives."},
-    {"type":"paragraph","text":"Nothing felt scripted. They were excited by sightings themselves, happy to explain what they were looking for and why, and very good company for several hours twice a day. By the end of four nights it felt less like being driven around by two members of staff and more like spending the day with two people who happened to know an extraordinary amount about the bush."},
-    {"type":"heading","text":"Shared Game Drives"},
-    {"type":"paragraph","text":"Game drives at Madikwe Hills are generally shared. Sometimes there were two other guests with us, occasionally four. I had wondered whether I would dislike that. I did not. We met some genuinely nice people and, if anything, having a few different pairs of eyes and a bit of conversation added to the experience."},
-    {"type":"paragraph","text":"What we had not realised beforehand was that on a couple of evenings you also have dinner with the people from your vehicle, along with your guide. It sounds potentially forced. In reality we enjoyed it, largely because the group was good and Brian was such easy company. It is worth knowing before you go, though, if your idea of luxury is never having to speak to another guest."},
-    {"type":"heading","text":"The Wildlife"},
-    {"type":"paragraph","text":"The sightings were excellent. Wild dogs, cheetah, lions, elephants and a constant stream of antelope, giraffe and smaller things that gradually become just as interesting once you stop treating safari as a Big Five checklist."},
-    {"type":"paragraph","text":"One of the best things about staying for four nights was not feeling that every drive had to deliver something spectacular. Some did. Others were quieter. Taken together, the sightings built into a much better picture of the reserve than a frantic one- or two-night dash ever could."},
-    {"type":"image","image":"/uploads/madikwe-elephant-view.jpg","alt":"Elephants viewed from Madikwe Hills"},
-    {"type":"heading","text":"Sundowners"},
-    {"type":"paragraph","text":"The afternoon drive pauses for sundowners: the vehicle stops somewhere scenic, the back effectively becomes a mobile bar and a gin and tonic appears while the sun drops over the reserve. It is difficult to object to this as a concept."},
-    {"type":"heading","text":"Back at the Lodge"},
-    {"type":"paragraph","text":"Coming back after the evening drive became another small ritual: a welcome-home drink, a quick change and then into the bar or dinner. The lodge is particularly lovely after dark, when the lighting picks out the timber, stone and woven textures and the bush beyond disappears almost completely."},
-    {"type":"paragraph","text":"And the wildlife does not politely remain outside the lodge experience. Elephants appeared close to the water and around the viewing areas, sometimes while we were eating or having a drink. There is something wonderfully ridiculous about holding a glass of wine while an elephant wanders into view."},
-    {"type":"heading","text":"Food & Drink"},
-    {"type":"paragraph","text":"The food was plentiful, well judged and exactly what I wanted from this sort of stay. Breakfast after the morning drive, lunch, high tea before the afternoon drive, dinner afterwards. Nobody is leaving Madikwe Hills hungry."},
-    {"type":"paragraph","text":"It is not food designed primarily for Instagram, and I mean that as a compliment. It is generous lodge food, properly cooked, with enough choice to stop four nights feeling repetitive. Add the inclusive drinks and the fact that somebody is forever appearing with coffee, wine, a cocktail or a post-drive shot and the whole thing becomes dangerously easy."},
-    {"type":"heading","text":"A Birthday on Safari"},
-    {"type":"paragraph","text":"My birthday fell on our second day and the lodge handled it exactly as I would have wanted: thoughtful without turning it into a public performance. There was chocolate cake, good wine and a day built around game drives rather than organised birthday nonsense. Perfect."},
-    {"type":"heading","text":"Four Nights"},
-    {"type":"paragraph","text":"Four nights felt right. Long enough to stop worrying about what we had not yet seen, long enough for the daily rhythm to become normal and long enough to actually enjoy the lodge between drives. I would be reluctant to do less at this level of safari."},
-    {"type":"heading","text":"What Madikwe Hills Does Best"},
-    {"type":"paragraph","text":"The clever bit is the balance. This is a serious safari lodge with excellent guiding and genuinely good game viewing, but it is also luxurious enough that the hours between drives feel like part of the holiday rather than dead time."},
-    {"type":"paragraph","text":"The suite is beautiful, the interiors have real character, the drinks are generous, the service is warm and the safari operation is excellent. Four nights later, leaving genuinely felt difficult. Which was probably the strongest review I could give it."},
-    {"type":"heading","text":"The Travel Taylor Verdict"},
-    {"type":"paragraph","text":"Madikwe Hills combines serious safari with serious comfort — exceptional guiding, a beautiful lodge, a huge luxurious suite and just enough Chardonnay to make a 5.30am wake-up call seem entirely reasonable."}
+    {
+      "type": "paragraph",
+      "text": "We arrived at Madikwe Hills after around nineteen hours of travelling, somewhere between exhausted, drunk and already hungover. There had been champagne. There had been an airport lounge. There had been more champagne. By the time we reached the lodge there was just enough time to look at the suite, attempt to remember where we had put everything and head straight out on our first game drive. It turned out to be exactly the right way to start."
+    },
+    {
+      "type": "heading",
+      "text": "The Daily Rhythm",
+      "image": "/uploads/rpdo48s2roeyccyqvgtznq.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "Madikwe Hills runs to a very clear timetable. Wake-up at 5.30am, tea or coffee, morning game drive, breakfast, several hours of doing very little, lunch, high tea, afternoon game drive, drinks, dinner, bed. Repeat."
+    },
+    {
+      "type": "paragraph",
+      "text": "At home I would regard 5.30am as a personal attack. On safari it became completely normal. You do not want to miss the game drives. That is why you are there. The trick is accepting the rhythm rather than attempting to impose your usual one on it. We did, very quickly. It worked."
+    },
+    {
+      "type": "heading",
+      "text": "The Suite",
+      "image": "/uploads/expevbncsr2ahlmnaeahpa.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The suite was huge and luxurious. There was a large bedroom, generous bathroom, private deck and plunge pool, with views straight out into the reserve. It had the sort of scale that makes unpacking feel worthwhile even when you are only staying four nights.",
+      "image": "/uploads/lifr7kpwrbwjl0dk3apqrg.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "What I liked was that it still felt like a safari lodge. Natural materials, warm textures and plenty of timber stopped the space becoming anonymous hotel luxury. The only frustration was that I was usually too tired to enjoy it for as long as I wanted."
+    },
+    {
+      "type": "heading",
+      "text": "The Design",
+      "image": "/uploads/f2lsoqklryyvsroybe5tzq.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The interiors were one of the things I liked most about Madikwe Hills. The lodge is full of timber, stone, woven lighting, leather, tactile fabrics and the occasional enormous boulder that appears to have been incorporated into the architecture rather than moved out of its way.",
+      "image": "/uploads/blxlkxdxs2ahgojikeqcag.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "It feels designed rather than decorated. Nothing is trying too hard to shout luxury, yet everything feels considered: the lighting, the furniture, the bar, the way the rooms open to the landscape. The money is visible in the whole experience rather than a few obviously expensive finishes.",
+      "image": "/uploads/moac0rtsrccszznkixzt0g.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Drinks",
+      "image": "/uploads/uvekkaqrth6o3frrapbiwa.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "One of the less obvious luxury touches was how well stocked the suite bar was. It was replenished multiple times during the day with decent wines and even MCC, and all drinks were included. This was not one of those minibars where three beers and a lonely miniature are supposed to represent generosity.",
+      "image": "/uploads/wq_txmkjrpu-lqr_jf6lpw.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "We settled into a routine remarkably quickly: a couple of post-game-drive mimosas with breakfast, decent Chardonnay at lunch, one back at the suite, a 45-minute disco nap, afternoon game drive, gin and tonic in the bush, a welcome-home shot of brandy, port or something similar, quick change, pre-dinner cocktail and more Chardonnay with dinner. It was all very civilised. Potentially too civilised.",
+      "image": "/uploads/wq_txmkjrpu-lqr_jf6lpw.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Brian & Charlie",
+      "image": "/uploads/4xtnyf06tbyygrr-fm0l2w.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our guide Brian and tracker Charlie were a huge part of why the stay was so good. They were brilliant at finding animals, obviously, but it was their genuine enthusiasm, knowledge and sense of humour that made the drives.",
+      "image": "/uploads/qgqapj_wtx6quurhmzjepq.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nothing felt scripted. They were excited by sightings themselves, happy to explain what they were looking for and why, and very good company for several hours twice a day. By the end of four nights it felt less like being driven around by two members of staff and more like spending the day with two people who happened to know an extraordinary amount about the bush.",
+      "image": "/uploads/gp8mtjqstyafhltsnhmeoa.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Shared Game Drives",
+      "image": "/uploads/ow6bxp_fqrqikwd3iwftsw.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "Game drives at Madikwe Hills are generally shared. Sometimes there were two other guests with us, occasionally four. I had wondered whether I would dislike that. I did not. We met some genuinely nice people and, if anything, having a few different pairs of eyes and a bit of conversation added to the experience."
+    },
+    {
+      "type": "paragraph",
+      "text": "What we had not realised beforehand was that on a couple of evenings you also have dinner with the people from your vehicle, along with your guide. It sounds potentially forced. In reality we enjoyed it, largely because the group was good and Brian was such easy company. It is worth knowing before you go, though, if your idea of luxury is never having to speak to another guest.",
+      "image": "/uploads/z0tfsk-crjkccxpcsc7apq.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "The Wildlife",
+      "image": "/uploads/8oyedkbatk2nlruzy6am2a.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The sightings were excellent. Wild dogs, cheetah, lions, elephants and a constant stream of antelope, giraffe and smaller things that gradually become just as interesting once you stop treating safari as a Big Five checklist.",
+      "image": "/uploads/79eevx_pr5kee2fol_t3qq-1-.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "One of the best things about staying for four nights was not feeling that every drive had to deliver something spectacular. Some did. Others were quieter. Taken together, the sightings built into a much better picture of the reserve than a frantic one- or two-night dash ever could.",
+      "image": "/uploads/rx4tmrwit9sjgezcpevnvg.jpg"
+    },
+    {
+      "type": "image",
+      "image": "",
+      "alt": "Elephants viewed from Madikwe Hills"
+    },
+    {
+      "type": "heading",
+      "text": "Sundowners",
+      "image": "/uploads/lmzvvbbjrwqf8csmqqn26a.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The afternoon drive pauses for sundowners: the vehicle stops somewhere scenic, the back effectively becomes a mobile bar and a gin and tonic appears while the sun drops over the reserve. It is difficult to object to this as a concept."
+    },
+    {
+      "type": "heading",
+      "text": "Back at the Lodge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Coming back after the evening drive became another small ritual: a welcome-home drink, a quick change and then into the bar or dinner. The lodge is particularly lovely after dark, when the lighting picks out the timber, stone and woven textures and the bush beyond disappears almost completely."
+    },
+    {
+      "type": "paragraph",
+      "text": "And the wildlife does not politely remain outside the lodge experience. Elephants appeared close to the water and around the viewing areas, sometimes while we were eating or having a drink. There is something wonderfully ridiculous about holding a glass of wine while an elephant wanders into view.",
+      "image": "/uploads/llyxgwqqrqwichmxdqek9a-1-.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Food & Drink"
+    },
+    {
+      "type": "paragraph",
+      "text": "The food was plentiful, well judged and exactly what I wanted from this sort of stay. Breakfast after the morning drive, lunch, high tea before the afternoon drive, dinner afterwards. Nobody is leaving Madikwe Hills hungry.",
+      "image": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "It is not food designed primarily for Instagram, and I mean that as a compliment. It is generous lodge food, properly cooked, with enough choice to stop four nights feeling repetitive. Add the inclusive drinks and the fact that somebody is forever appearing with coffee, wine, a cocktail or a post-drive shot and the whole thing becomes dangerously easy.",
+      "image": "/uploads/3jpujcilr2-dt6tve6yeq.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "A Birthday on Safari"
+    },
+    {
+      "type": "paragraph",
+      "text": "My birthday fell on our second day and the lodge handled it exactly as I would have wanted: thoughtful without turning it into a public performance. There was chocolate cake, good wine and a day built around game drives rather than organised birthday nonsense. Perfect.",
+      "image": "/uploads/v8hrfu-crgkyag8klkmfuq.jpg"
+    },
+    {
+      "type": "heading",
+      "text": "Four Nights",
+      "image": "/uploads/5p28vtzdsvy3eqf1tuky0a.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "Four nights felt right. Long enough to stop worrying about what we had not yet seen, long enough for the daily rhythm to become normal and long enough to actually enjoy the lodge between drives. I would be reluctant to do less at this level of safari."
+    },
+    {
+      "type": "heading",
+      "text": "What Madikwe Hills Does Best",
+      "image": "/uploads/t-l7qmokr665zjguzik5iq.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The clever bit is the balance. This is a serious safari lodge with excellent guiding and genuinely good game viewing, but it is also luxurious enough that the hours between drives feel like part of the holiday rather than dead time.",
+      "image": "/uploads/nxglpqexqu6yygxh9h46jg.jpg"
+    },
+    {
+      "type": "paragraph",
+      "text": "The suite is beautiful, the interiors have real character, the drinks are generous, the service is warm and the safari operation is excellent. Four nights later, leaving genuinely felt difficult. Which was probably the strongest review I could give it."
+    },
+    {
+      "type": "heading",
+      "text": "The Travel Taylor Verdict"
+    },
+    {
+      "type": "paragraph",
+      "text": "Madikwe Hills combines serious safari with serious comfort — exceptional guiding, a beautiful lodge, a huge luxurious suite and just enough Chardonnay to make a 5.30am wake-up call seem entirely reasonable."
+    }
   ],
-  "scoreLabel":"9.5/10 · THE TRAVEL TAYLOR",
-  "wouldGoBack":"Absolutely. Four nights later, leaving genuinely felt difficult.",
-  "section":"safari",
-  "summary":"Four nights in Madikwe Game Reserve, with exceptional wildlife, a genuinely luxurious suite, brilliant guiding and a daily routine we very quickly stopped questioning.",
-  "slug":"madikwe-hills",
-  "overall":"Madikwe Hills combines serious safari with serious comfort.",
-  "order":1,
-  "score":9.5,
-  "location":"MADIKWE GAME RESERVE, SOUTH AFRICA",
-  "title":"Madikwe Hills — The Lodge That Set the Bar Rather High",
-  "hero":"/uploads/madikwe-hero.jpg"
+  "scoreLabel": "9.5/10 · THE TRAVEL TAYLOR",
+  "wouldGoBack": "Absolutely. Four nights later, leaving genuinely felt difficult.",
+  "section": "safari",
+  "summary": "Four nights in Madikwe Game Reserve, with exceptional wildlife, a genuinely luxurious suite, brilliant guiding and a daily routine we very quickly stopped questioning.",
+  "slug": "madikwe-hills",
+  "overall": "Madikwe Hills combines serious safari with serious comfort.",
+  "order": 1,
+  "score": 9.5,
+  "location": "MADIKWE GAME RESERVE, SOUTH AFRICA",
+  "title": "Madikwe Hills — The Lodge That Set the Bar Rather High",
+  "hero": "/uploads/madikwe-hero.jpg"
 }
